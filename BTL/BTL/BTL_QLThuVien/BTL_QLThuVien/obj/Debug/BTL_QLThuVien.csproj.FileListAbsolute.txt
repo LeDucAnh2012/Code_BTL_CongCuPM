@@ -1,0 +1,90 @@
+C:\Users\ducan\Desktop\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.exe.config
+C:\Users\ducan\Desktop\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.exe
+C:\Users\ducan\Desktop\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.pdb
+C:\Users\ducan\Desktop\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csprojAssemblyReference.cache
+C:\Users\ducan\Desktop\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.Properties.Resources.resources
+C:\Users\ducan\Desktop\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csproj.GenerateResource.cache
+C:\Users\ducan\Desktop\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csproj.CoreCompileInputs.cache
+C:\Users\ducan\Desktop\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.exe
+C:\Users\ducan\Desktop\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.pdb
+C:\Users\ducan\Desktop\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fLogin.resources
+C:\Users\ducan\Desktop\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fMainForAdmin.resources
+E:\NguyenTheChien\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.exe.config
+E:\NguyenTheChien\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.exe
+E:\NguyenTheChien\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.pdb
+E:\NguyenTheChien\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csprojResolveAssemblyReference.cache
+E:\NguyenTheChien\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fLogin.resources
+E:\NguyenTheChien\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fMainForAdmin.resources
+E:\NguyenTheChien\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.Properties.Resources.resources
+E:\NguyenTheChien\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csproj.GenerateResource.Cache
+E:\NguyenTheChien\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.exe
+E:\NguyenTheChien\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.pdb
+F:\HocKy2Nam3\CongCuPhatTrienPM\BTL\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.exe.config
+F:\HocKy2Nam3\CongCuPhatTrienPM\BTL\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.exe
+F:\HocKy2Nam3\CongCuPhatTrienPM\BTL\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.pdb
+F:\HocKy2Nam3\CongCuPhatTrienPM\BTL\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csprojAssemblyReference.cache
+F:\HocKy2Nam3\CongCuPhatTrienPM\BTL\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fLogin.resources
+F:\HocKy2Nam3\CongCuPhatTrienPM\BTL\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fMainForAdmin.resources
+F:\HocKy2Nam3\CongCuPhatTrienPM\BTL\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.Properties.Resources.resources
+F:\HocKy2Nam3\CongCuPhatTrienPM\BTL\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csproj.GenerateResource.cache
+F:\HocKy2Nam3\CongCuPhatTrienPM\BTL\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csproj.CoreCompileInputs.cache
+F:\HocKy2Nam3\CongCuPhatTrienPM\BTL\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.exe
+F:\HocKy2Nam3\CongCuPhatTrienPM\BTL\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.pdb
+E:\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.exe.config
+E:\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.exe
+E:\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.pdb
+E:\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csprojResolveAssemblyReference.cache
+E:\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fLogin.resources
+E:\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fMainForAdmin.resources
+E:\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.Properties.Resources.resources
+E:\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csproj.GenerateResource.Cache
+E:\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.exe
+E:\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.pdb
+C:\Users\IT Supporter\Downloads\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.exe.config
+C:\Users\IT Supporter\Downloads\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.exe
+C:\Users\IT Supporter\Downloads\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.pdb
+C:\Users\IT Supporter\Downloads\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csprojResolveAssemblyReference.cache
+C:\Users\IT Supporter\Downloads\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fLogin.resources
+C:\Users\IT Supporter\Downloads\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fMainForAdmin.resources
+C:\Users\IT Supporter\Downloads\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.Properties.Resources.resources
+C:\Users\IT Supporter\Downloads\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csproj.GenerateResource.Cache
+C:\Users\IT Supporter\Downloads\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.exe
+C:\Users\IT Supporter\Downloads\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.pdb
+C:\Users\ducan\Desktop\BTLChien\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.exe.config
+C:\Users\ducan\Desktop\BTLChien\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.exe
+C:\Users\ducan\Desktop\BTLChien\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.pdb
+C:\Users\ducan\Desktop\BTLChien\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csprojAssemblyReference.cache
+C:\Users\ducan\Desktop\BTLChien\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fLogin.resources
+C:\Users\ducan\Desktop\BTLChien\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fMainForAdmin.resources
+C:\Users\ducan\Desktop\BTLChien\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fMainForUser.resources
+C:\Users\ducan\Desktop\BTLChien\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.Properties.Resources.resources
+C:\Users\ducan\Desktop\BTLChien\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csproj.GenerateResource.cache
+C:\Users\ducan\Desktop\BTLChien\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csproj.CoreCompileInputs.cache
+C:\Users\ducan\Desktop\BTLChien\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.exe
+C:\Users\ducan\Desktop\BTLChien\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.pdb
+C:\Users\IT Supporter\Downloads\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fMainForUser.resources
+C:\Users\ducan\Desktop\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.exe.config
+C:\Users\ducan\Desktop\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.exe
+C:\Users\ducan\Desktop\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.pdb
+C:\Users\ducan\Desktop\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csprojAssemblyReference.cache
+C:\Users\ducan\Desktop\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fLogin.resources
+C:\Users\ducan\Desktop\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fMainForAdmin.resources
+C:\Users\ducan\Desktop\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fMainForUser.resources
+C:\Users\ducan\Desktop\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.Properties.Resources.resources
+C:\Users\ducan\Desktop\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csproj.GenerateResource.cache
+C:\Users\ducan\Desktop\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csproj.CoreCompileInputs.cache
+C:\Users\ducan\Desktop\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.exe
+C:\Users\ducan\Desktop\BTL (2)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.pdb
+C:\Users\Admin\Downloads\BTL (2)\BTL\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.exe.config
+C:\Users\Admin\Downloads\BTL (2)\BTL\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.exe
+C:\Users\Admin\Downloads\BTL (2)\BTL\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.pdb
+C:\Users\Admin\Downloads\BTL (2)\BTL\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csprojAssemblyReference.cache
+C:\Users\Admin\Downloads\BTL (2)\BTL\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fLogin.resources
+C:\Users\Admin\Downloads\BTL (2)\BTL\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fMainForAdmin.resources
+C:\Users\Admin\Downloads\BTL (2)\BTL\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fMainForUser.resources
+C:\Users\Admin\Downloads\BTL (2)\BTL\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.Properties.Resources.resources
+C:\Users\Admin\Downloads\BTL (2)\BTL\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csproj.GenerateResource.cache
+C:\Users\Admin\Downloads\BTL (2)\BTL\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\BTL (2)\BTL\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.exe
+C:\Users\Admin\Downloads\BTL (2)\BTL\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.pdb
+C:\Users\Admin\Downloads\BTL (2)\BTL\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fMuonSach_User.resources
