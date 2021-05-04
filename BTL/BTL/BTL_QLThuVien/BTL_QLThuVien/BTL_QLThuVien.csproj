@@ -52,6 +52,7 @@
     <Compile Include="BLL_TaiKhoan_User.cs" />
     <Compile Include="BUL_MainAdmin.cs" />
     <Compile Include="BULs.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="DAls.cs" />
     <Compile Include="fMuonSach_User.cs">
       <SubType>Form</SubType>
