@@ -10,8 +10,10 @@ namespace BTL_QLThuVien
     {
         string name;
         string age;
+        string dateOfBirth;
         public string Name { get => name; set => name = value; }
         public string Age { get => age; set => age = value; }
+        public string DateOfBirth { get => dateOfBirth; set => dateOfBirth = value; }
     }
     
 }
