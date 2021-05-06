@@ -26,10 +26,6 @@ create Table TaiKhoan(
 	MaPhanQuyen bit not null
 	Constraint fk_maPhanQuyen Foreign key(MaPhanQuyen) references PhanQuyen(MaPhanQuyen)
 )
-go
---select * from TaiKhoan
---select  * from PhanQuyen,TaiKhoan where PhanQuyen.MaPhanQuyen = TaiKhoan.MaPhanQuyen
---select TaiKhoan.TenDangNhap,TaiKhoan.MatKhau,ThuThu.MaThuThu,ThuThu.TenThuThu,NgaySinh,DiaChi,SDT,CCCD,NgayVaoLam From ThuThu,TaiKhoan WHERE TaiKhoan.TenDangNhap = ThuThu.TenDangNhap
 
 go
 insert into TaiKhoan values
@@ -54,9 +50,7 @@ create table DocGia(
 	CCCD varchar(25) not null,
 	NgayDangKy date not null,
 )
-go
-select TenDangNhap, DocGia.MaDocGia, DocGia.TenDocGia, NgaySinh, DiaChi, SDT, CCCD, NgayMuon, SoNgayMuon from DocGia inner join PhieuMuon on DocGia.MaDocGia = PhieuMuon.MaDocGia where NgayMuon = '01/01/2021'; 
---select * from DocGia
+
 go
 insert into DocGia values
 ('2018373123', 'DG01', N'Vũ Xuân Long', '09/02/2000', N'Ninh Bình', '0332323121','827849381', '09/04/2020'),
@@ -91,12 +85,7 @@ create table TheLoai(
 	MaTheLoai varchar(10) primary key,
 	TenTheLoai nvarchar(50) not null,
 )
-select count(MaPhieuMuon) From PhieuMuon where NgayMuon = '01/01/2021' ;
 
-
-go
---select MaSach,TenSach,SoLuong,NgayNhap,TinhTrang, TenTheLoai from Sach,TheLoai where sach.MaTheLoai = TheLoai.MaTheLoai
---select MaThuThu,TenThuThu,SDT from ThuThu,tmp_Login where tmp_Login.username = ThuThu.TenDangNhap
 go
 insert into TheLoai values
 ('L01', N'Giáo Dục'),
@@ -125,10 +114,6 @@ create table Sach(
 	MaTheLoai varchar(10) not null,
 	constraint fk_maTheLoai foreign key(MaTheLoai) references TheLoai(MaTheLoai),
 )
-
-go
---select * from TheLoai
---select MaSach,TenSach,SoLuong,NgayNhap,TinhTrang, TenTheLoai from Sach,TheLoai where sach.MaTheLoai = TheLoai.MaTheLoai
 go
 insert into Sach values
 ('S01',N'Kỹ thuật lập trình',300,'10/10/2016',N'Tốt','L01'),
@@ -145,7 +130,6 @@ insert into Sach values
 
 go
 
-
 create table NhaCungCap(
 	MaNCC varchar(10) primary key,
 	TenNCC nvarchar(50) not null,
@@ -153,8 +137,7 @@ create table NhaCungCap(
 	DiaChi nvarchar(100) not null,
 )
 
-go
---select TaiKhoan.TenDangNhap,TaiKhoan.MatKhau,MaDocGia,TenDocGia,NgaySinh,DiaChi,SDT,CCCD,NgayDangKy from TaiKhoan,DocGia,tmp_Login Where tmp_Login.username = TaiKhoan.TenDangNhap and TaiKhoan.TenDangNhap = DocGia.TenDangNhap and TaiKhoan.TenDangNhap = tmp_Login.username;
+
 go
 insert into NhaCungCap values
 ('NCC01',N'Công ty TNHH Long Vũ','0355121123',N'Hà Nội'),
@@ -197,20 +180,18 @@ create table ListBooks(
 	constraint fk_maPhieuNhap foreign key(MaPhieu) references NhapSach(MaPhieu),
 
 	MaSach varchar(10) not null,
-	foreign key (MaSach) references Sach(MaSach),
-
 	TenSach nvarchar(50) not null,
 	TheLoai nvarchar(50) not null,
 	SoLuong int  not null,
 )
+select * from Sach
 go
 insert into ListBooks values('001','S01',N'Kỹ thuật lập trình',N'tl 1',2),
 ('001','S03',N'Chiến thắng Điện Biên Phủ',N'tl2',3),
 ('001','S05',N'Những phát minh vĩ đại',N'tl 3',4),
 ('002','S08',N'Trò chơi xưa và nay',N'tl 4',5);
-go
---select * from NhapSach
-select * from ListBooks,NhapSach where NhapSach.MaPhieu = ListBooks.MaPhieu
+
+
 go
 create table PhieuMuon(
 	MaPhieuMuon varchar(10) primary key,--001
@@ -249,22 +230,13 @@ go
 
 insert into PhieuMuon values('002','DG02',N'Lê Văn A','0954563870','',N'','',GETDATE(),0);
 go
-update PhieuMuon set MaThuThu = 'TT01' , 
-TenThuThu = N'Lê Đức Anh' ,
-SDTThuThu = '023221211'  ,
-SoNgayMuon = 15  Where MaPhieuMuon = '003'
 
 insert into ListBooksPhieuMuon values
 ('001','S01',N'Kỹ thuật lập trình',N'Giáo Dục',10),
 ('001','S02',N'Doreamon',N'Truyện tranh',10),
 ('001','S03',N'Chiến thắng Điện Biên Phủ',N'Lịch sử',10),
 ('002','S04',N'Doanh nhân thành đạt',N'Kinh Tế',10);
-go
-select * from PhieuMuon,ListBooksPhieuMuon where PhieuMuon.MaPhieuMuon = ListBooksPhieuMuon.MaPhieuMuon
-select PhieuMuon.MaPhieuMuon,MaSach,TenSach,TenTheLoai,SoLuong From PhieuMuon,ListBooksPhieuMuon where PhieuMuon.MaPhieuMuon = ListBooksPhieuMuon.MaPhieuMuon and PhieuMuon.MaPhieuMuon = '002'
-go
-select * from ListBooksPhieuMuon
---select TenSach,TenTheLoai From TheLoai,sach where Sach.MaTheLoai = TheLoai.MaTheLoai And MaSach = 'S01'
+
 go
 
 --table tmp----

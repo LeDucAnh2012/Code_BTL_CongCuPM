@@ -59,14 +59,10 @@ namespace BTL_QLThuVien
             this.tabNhapSach = new System.Windows.Forms.TabPage();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.MaSach2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSach2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTheLoai2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvAddBooks = new System.Windows.Forms.DataGridView();
             this.btnADD = new System.Windows.Forms.Button();
-            this.txtSoLuong = new System.Windows.Forms.TextBox();
-            this.txtTheLoai = new System.Windows.Forms.TextBox();
+            this.txtAmount_EnterBooks = new System.Windows.Forms.TextBox();
+            this.txtCategory_EnterBooks = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.comboBoxSupplier_CodeEnterBooks = new System.Windows.Forms.ComboBox();
@@ -76,7 +72,7 @@ namespace BTL_QLThuVien
             this.btnInsert_EnterBooks = new System.Windows.Forms.Button();
             this.dateTimePickerDate_EnterBooks = new System.Windows.Forms.DateTimePicker();
             this.txtlibrarianCode_EnterBooks = new System.Windows.Forms.TextBox();
-            this.txtAmount_EnterBooks = new System.Windows.Forms.TextBox();
+            this.txtBookName_EnterBooks = new System.Windows.Forms.TextBox();
             this.txtBookcode_EnterBooks = new System.Windows.Forms.TextBox();
             this.txtFormCode_EnterBooks = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -242,11 +238,16 @@ namespace BTL_QLThuVien
             this.tPAccount = new System.Windows.Forms.TabControl();
             this.timerLabel = new System.Windows.Forms.Timer(this.components);
             this.timerChangeColor = new System.Windows.Forms.Timer(this.components);
+            this.MaSach2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSach2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTheLoai2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRemoveBook_From_ListBook_EnterBooks = new System.Windows.Forms.Button();
             this.tabThongKe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocGia)).BeginInit();
             this.tabNhapSach.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAddBooks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnterBooks)).BeginInit();
             this.tabNCC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSuppliers)).BeginInit();
@@ -350,7 +351,6 @@ namespace BTL_QLThuVien
             this.dgvSach.RowHeadersWidth = 51;
             this.dgvSach.Size = new System.Drawing.Size(828, 145);
             this.dgvSach.TabIndex = 57;
-            this.dgvSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSach_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -461,7 +461,6 @@ namespace BTL_QLThuVien
             this.dgvDocGia.RowHeadersWidth = 51;
             this.dgvDocGia.Size = new System.Drawing.Size(828, 145);
             this.dgvDocGia.TabIndex = 51;
-            this.dgvDocGia.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDocGia_CellContentClick);
             // 
             // Column3
             // 
@@ -540,12 +539,13 @@ namespace BTL_QLThuVien
             // tabNhapSach
             // 
             this.tabNhapSach.BackColor = System.Drawing.Color.Gray;
+            this.tabNhapSach.Controls.Add(this.btnRemoveBook_From_ListBook_EnterBooks);
             this.tabNhapSach.Controls.Add(this.textBox1);
             this.tabNhapSach.Controls.Add(this.label50);
-            this.tabNhapSach.Controls.Add(this.dataGridView1);
+            this.tabNhapSach.Controls.Add(this.dgvAddBooks);
             this.tabNhapSach.Controls.Add(this.btnADD);
-            this.tabNhapSach.Controls.Add(this.txtSoLuong);
-            this.tabNhapSach.Controls.Add(this.txtTheLoai);
+            this.tabNhapSach.Controls.Add(this.txtAmount_EnterBooks);
+            this.tabNhapSach.Controls.Add(this.txtCategory_EnterBooks);
             this.tabNhapSach.Controls.Add(this.label48);
             this.tabNhapSach.Controls.Add(this.label49);
             this.tabNhapSach.Controls.Add(this.comboBoxSupplier_CodeEnterBooks);
@@ -555,7 +555,7 @@ namespace BTL_QLThuVien
             this.tabNhapSach.Controls.Add(this.btnInsert_EnterBooks);
             this.tabNhapSach.Controls.Add(this.dateTimePickerDate_EnterBooks);
             this.tabNhapSach.Controls.Add(this.txtlibrarianCode_EnterBooks);
-            this.tabNhapSach.Controls.Add(this.txtAmount_EnterBooks);
+            this.tabNhapSach.Controls.Add(this.txtBookName_EnterBooks);
             this.tabNhapSach.Controls.Add(this.txtBookcode_EnterBooks);
             this.tabNhapSach.Controls.Add(this.txtFormCode_EnterBooks);
             this.tabNhapSach.Controls.Add(this.label11);
@@ -591,78 +591,52 @@ namespace BTL_QLThuVien
             this.label50.Text = "Tên thủ thư";
             this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView1
+            // dgvAddBooks
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvAddBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvAddBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAddBooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaSach2,
             this.TenSach2,
             this.TenTheLoai2,
             this.SoLuong2});
-            this.dataGridView1.Location = new System.Drawing.Point(402, 213);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(413, 126);
-            this.dataGridView1.TabIndex = 56;
-            // 
-            // MaSach2
-            // 
-            this.MaSach2.HeaderText = "MaSach";
-            this.MaSach2.MinimumWidth = 6;
-            this.MaSach2.Name = "MaSach2";
-            this.MaSach2.Width = 125;
-            // 
-            // TenSach2
-            // 
-            this.TenSach2.HeaderText = "TenSach";
-            this.TenSach2.MinimumWidth = 6;
-            this.TenSach2.Name = "TenSach2";
-            this.TenSach2.Width = 125;
-            // 
-            // TenTheLoai2
-            // 
-            this.TenTheLoai2.HeaderText = "TenTheLoai";
-            this.TenTheLoai2.MinimumWidth = 6;
-            this.TenTheLoai2.Name = "TenTheLoai2";
-            this.TenTheLoai2.Width = 125;
-            // 
-            // SoLuong2
-            // 
-            this.SoLuong2.HeaderText = "SoLuong";
-            this.SoLuong2.MinimumWidth = 6;
-            this.SoLuong2.Name = "SoLuong2";
-            this.SoLuong2.Width = 125;
+            this.dgvAddBooks.Location = new System.Drawing.Point(402, 213);
+            this.dgvAddBooks.Name = "dgvAddBooks";
+            this.dgvAddBooks.RowHeadersWidth = 51;
+            this.dgvAddBooks.Size = new System.Drawing.Size(413, 126);
+            this.dgvAddBooks.TabIndex = 56;
+            this.dgvAddBooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAddBooks_CellClick);
             // 
             // btnADD
             // 
             this.btnADD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnADD.BackColor = System.Drawing.Color.Aqua;
             this.btnADD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnADD.Location = new System.Drawing.Point(730, 154);
+            this.btnADD.Location = new System.Drawing.Point(729, 112);
             this.btnADD.Name = "btnADD";
             this.btnADD.Size = new System.Drawing.Size(86, 41);
             this.btnADD.TabIndex = 55;
-            this.btnADD.Text = "Add Sách";
+            this.btnADD.Text = "Add ";
             this.btnADD.UseVisualStyleBackColor = false;
+            this.btnADD.Click += new System.EventHandler(this.btnADD_Click);
             // 
-            // txtSoLuong
+            // txtAmount_EnterBooks
             // 
-            this.txtSoLuong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSoLuong.Location = new System.Drawing.Point(483, 169);
-            this.txtSoLuong.Multiline = true;
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(235, 31);
-            this.txtSoLuong.TabIndex = 54;
+            this.txtAmount_EnterBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAmount_EnterBooks.Location = new System.Drawing.Point(483, 169);
+            this.txtAmount_EnterBooks.Multiline = true;
+            this.txtAmount_EnterBooks.Name = "txtAmount_EnterBooks";
+            this.txtAmount_EnterBooks.Size = new System.Drawing.Size(235, 31);
+            this.txtAmount_EnterBooks.TabIndex = 54;
             // 
-            // txtTheLoai
+            // txtCategory_EnterBooks
             // 
-            this.txtTheLoai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTheLoai.Location = new System.Drawing.Point(483, 132);
-            this.txtTheLoai.Multiline = true;
-            this.txtTheLoai.Name = "txtTheLoai";
-            this.txtTheLoai.Size = new System.Drawing.Size(235, 29);
-            this.txtTheLoai.TabIndex = 52;
+            this.txtCategory_EnterBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCategory_EnterBooks.Location = new System.Drawing.Point(483, 132);
+            this.txtCategory_EnterBooks.Multiline = true;
+            this.txtCategory_EnterBooks.Name = "txtCategory_EnterBooks";
+            this.txtCategory_EnterBooks.Size = new System.Drawing.Size(235, 29);
+            this.txtCategory_EnterBooks.TabIndex = 52;
             // 
             // label48
             // 
@@ -764,14 +738,14 @@ namespace BTL_QLThuVien
             this.txtlibrarianCode_EnterBooks.Size = new System.Drawing.Size(227, 31);
             this.txtlibrarianCode_EnterBooks.TabIndex = 42;
             // 
-            // txtAmount_EnterBooks
+            // txtBookName_EnterBooks
             // 
-            this.txtAmount_EnterBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAmount_EnterBooks.Location = new System.Drawing.Point(483, 93);
-            this.txtAmount_EnterBooks.Multiline = true;
-            this.txtAmount_EnterBooks.Name = "txtAmount_EnterBooks";
-            this.txtAmount_EnterBooks.Size = new System.Drawing.Size(235, 31);
-            this.txtAmount_EnterBooks.TabIndex = 40;
+            this.txtBookName_EnterBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBookName_EnterBooks.Location = new System.Drawing.Point(483, 93);
+            this.txtBookName_EnterBooks.Multiline = true;
+            this.txtBookName_EnterBooks.Name = "txtBookName_EnterBooks";
+            this.txtBookName_EnterBooks.Size = new System.Drawing.Size(235, 31);
+            this.txtBookName_EnterBooks.TabIndex = 40;
             // 
             // txtBookcode_EnterBooks
             // 
@@ -1128,7 +1102,7 @@ namespace BTL_QLThuVien
             this.tabQLSach.Controls.Add(this.dgvBooks_BookManagement);
             this.tabQLSach.Location = new System.Drawing.Point(4, 22);
             this.tabQLSach.Name = "tabQLSach";
-            this.tabQLSach.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabQLSach.Padding = new System.Windows.Forms.Padding(3);
             this.tabQLSach.Size = new System.Drawing.Size(832, 543);
             this.tabQLSach.TabIndex = 7;
             this.tabQLSach.Text = "QL Sách";
@@ -1347,7 +1321,6 @@ namespace BTL_QLThuVien
             this.dgvBooks_BookManagement.Size = new System.Drawing.Size(822, 256);
             this.dgvBooks_BookManagement.TabIndex = 29;
             this.dgvBooks_BookManagement.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_BookManagement_CellClick);
-            this.dgvBooks_BookManagement.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_BookManagement_CellContentClick);
             // 
             // MaSach
             // 
@@ -1428,7 +1401,7 @@ namespace BTL_QLThuVien
             this.tabDocGia.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabDocGia.Location = new System.Drawing.Point(4, 22);
             this.tabDocGia.Name = "tabDocGia";
-            this.tabDocGia.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabDocGia.Padding = new System.Windows.Forms.Padding(3);
             this.tabDocGia.Size = new System.Drawing.Size(832, 543);
             this.tabDocGia.TabIndex = 1;
             this.tabDocGia.Text = "Độc giả";
@@ -1811,7 +1784,7 @@ namespace BTL_QLThuVien
             this.tabLibrarian.Controls.Add(this.dgvLibrarian);
             this.tabLibrarian.Location = new System.Drawing.Point(4, 22);
             this.tabLibrarian.Name = "tabLibrarian";
-            this.tabLibrarian.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabLibrarian.Padding = new System.Windows.Forms.Padding(3);
             this.tabLibrarian.Size = new System.Drawing.Size(832, 543);
             this.tabLibrarian.TabIndex = 0;
             this.tabLibrarian.Text = "Thủ Thư";
@@ -2202,11 +2175,10 @@ namespace BTL_QLThuVien
             this.tabMuonTraSach.Controls.Add(this.dgvBorrowAndReturnBooks);
             this.tabMuonTraSach.Location = new System.Drawing.Point(4, 22);
             this.tabMuonTraSach.Name = "tabMuonTraSach";
-            this.tabMuonTraSach.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabMuonTraSach.Padding = new System.Windows.Forms.Padding(3);
             this.tabMuonTraSach.Size = new System.Drawing.Size(832, 543);
             this.tabMuonTraSach.TabIndex = 2;
             this.tabMuonTraSach.Text = "Mượn - Trả sách";
-            this.tabMuonTraSach.Click += new System.EventHandler(this.tabMuonTraSach_Click);
             // 
             // btnConfirm_Borrow
             // 
@@ -2387,7 +2359,6 @@ namespace BTL_QLThuVien
             this.dgvListBooksBorrow.Size = new System.Drawing.Size(555, 127);
             this.dgvListBooksBorrow.TabIndex = 59;
             this.dgvListBooksBorrow.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListBooksBorrow_CellClick);
-            this.dgvListBooksBorrow.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListBooksBorrow_CellContentClick);
             // 
             // MaPhieuMuon
             // 
@@ -2500,7 +2471,6 @@ namespace BTL_QLThuVien
             this.txtUserCode_BorrowAndReturnBooks.Name = "txtUserCode_BorrowAndReturnBooks";
             this.txtUserCode_BorrowAndReturnBooks.Size = new System.Drawing.Size(227, 20);
             this.txtUserCode_BorrowAndReturnBooks.TabIndex = 31;
-            this.txtUserCode_BorrowAndReturnBooks.TextChanged += new System.EventHandler(this.txtUserCode_BorrowAndReturnBooks_TextChanged);
             // 
             // label10
             // 
@@ -2616,6 +2586,46 @@ namespace BTL_QLThuVien
             this.timerChangeColor.Interval = 200;
             this.timerChangeColor.Tick += new System.EventHandler(this.timerChangeColor_Tick);
             // 
+            // MaSach2
+            // 
+            this.MaSach2.HeaderText = "MaSach";
+            this.MaSach2.MinimumWidth = 6;
+            this.MaSach2.Name = "MaSach2";
+            this.MaSach2.Width = 60;
+            // 
+            // TenSach2
+            // 
+            this.TenSach2.HeaderText = "TenSach";
+            this.TenSach2.MinimumWidth = 6;
+            this.TenSach2.Name = "TenSach2";
+            this.TenSach2.Width = 140;
+            // 
+            // TenTheLoai2
+            // 
+            this.TenTheLoai2.HeaderText = "TenTheLoai";
+            this.TenTheLoai2.MinimumWidth = 6;
+            this.TenTheLoai2.Name = "TenTheLoai2";
+            // 
+            // SoLuong2
+            // 
+            this.SoLuong2.HeaderText = "Số Lượng";
+            this.SoLuong2.MinimumWidth = 6;
+            this.SoLuong2.Name = "SoLuong2";
+            this.SoLuong2.Width = 60;
+            // 
+            // btnRemoveBook_From_ListBook_EnterBooks
+            // 
+            this.btnRemoveBook_From_ListBook_EnterBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemoveBook_From_ListBook_EnterBooks.BackColor = System.Drawing.Color.Aqua;
+            this.btnRemoveBook_From_ListBook_EnterBooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveBook_From_ListBook_EnterBooks.Location = new System.Drawing.Point(729, 160);
+            this.btnRemoveBook_From_ListBook_EnterBooks.Name = "btnRemoveBook_From_ListBook_EnterBooks";
+            this.btnRemoveBook_From_ListBook_EnterBooks.Size = new System.Drawing.Size(86, 41);
+            this.btnRemoveBook_From_ListBook_EnterBooks.TabIndex = 59;
+            this.btnRemoveBook_From_ListBook_EnterBooks.Text = "Remove";
+            this.btnRemoveBook_From_ListBook_EnterBooks.UseVisualStyleBackColor = false;
+            this.btnRemoveBook_From_ListBook_EnterBooks.Click += new System.EventHandler(this.btnRemoveBook_From_ListBook_EnterBooks_Click);
+            // 
             // fMainForAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2633,7 +2643,7 @@ namespace BTL_QLThuVien
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocGia)).EndInit();
             this.tabNhapSach.ResumeLayout(false);
             this.tabNhapSach.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAddBooks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnterBooks)).EndInit();
             this.tabNCC.ResumeLayout(false);
             this.tabNCC.PerformLayout();
@@ -2670,7 +2680,7 @@ namespace BTL_QLThuVien
         private System.Windows.Forms.Button btnUpdate_EnterBooks;
         private System.Windows.Forms.Button btnInsert_EnterBooks;
         private System.Windows.Forms.DateTimePicker dateTimePickerDate_EnterBooks;
-        private System.Windows.Forms.TextBox txtAmount_EnterBooks;
+        private System.Windows.Forms.TextBox txtBookName_EnterBooks;
         private System.Windows.Forms.TextBox txtBookcode_EnterBooks;
         private System.Windows.Forms.TextBox txtFormCode_EnterBooks;
         private System.Windows.Forms.Label label11;
@@ -2806,17 +2816,13 @@ namespace BTL_QLThuVien
         private System.Windows.Forms.TextBox txtAmont_Borrow;
         private System.Windows.Forms.Button btnConfirm_Borrow;
         private System.Windows.Forms.Button btnADD;
-        private System.Windows.Forms.TextBox txtSoLuong;
-        private System.Windows.Forms.TextBox txtTheLoai;
+        private System.Windows.Forms.TextBox txtAmount_EnterBooks;
+        private System.Windows.Forms.TextBox txtCategory_EnterBooks;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenSach2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenTheLoai2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong2;
+        private System.Windows.Forms.DataGridView dgvAddBooks;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -2870,5 +2876,10 @@ namespace BTL_QLThuVien
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSach1;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTheLoai1;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenSach2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTheLoai2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong2;
+        private System.Windows.Forms.Button btnRemoveBook_From_ListBook_EnterBooks;
     }
 }
