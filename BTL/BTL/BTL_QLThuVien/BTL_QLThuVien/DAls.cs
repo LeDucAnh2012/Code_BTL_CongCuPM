@@ -12,7 +12,7 @@ namespace BTL_QLThuVien
     {
         public SqlConnection GetConn()
         {
-            return new SqlConnection(@"Data Source=DESKTOP-CJNDNVK\LEDUCANH_2043;Initial Catalog=QuanLyThuVien;Integrated Security=True");
+            return new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=QuanLyThuVien;Integrated Security=True");
         }
         public DataTable GetData(string sql)
         {

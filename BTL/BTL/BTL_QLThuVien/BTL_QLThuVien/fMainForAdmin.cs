@@ -31,7 +31,7 @@ namespace BTL_QLThuVien
             MakeInstance();
         }
         BUL_MainAdmin bul = new BUL_MainAdmin();
-
+        BULs b = new BULs();
         //Timer
         #region
 
@@ -892,6 +892,7 @@ namespace BTL_QLThuVien
 
         private void fMainForAdmin_Load(object sender, EventArgs e)
         {
+            
             dgvLibrarian.DataSource = bul.GetDataLibrarian();
         }
 
@@ -934,7 +935,17 @@ namespace BTL_QLThuVien
             }
             else if(tPAccount.SelectedIndex == 5)
             {
-                dgvEnterBooks.DataSource = bul.GetDataBooksImport();
+                AddDataInCombobox();
+                   BULs b = new BULs();
+                DataTable dt = b.GetData_tmp_Login();
+                foreach (DataRow row in dt.Rows)
+                {
+                    txtlibrarianCode_EnterBooks.Text = row["MaThuThu"].ToString();
+                    txtTenThuThu1.Text = row["TenThuThu"].ToString();
+              
+                    break;
+                }
+               
             }
         }
 
@@ -1025,70 +1036,71 @@ namespace BTL_QLThuVien
             comboBoxCategoryCode_BookManagement.Text = "<Hãy chọn tên thể loại>";
            
         }
+        private void AddDataInCombobox()
+        {
+            comboBoxSupplier_CodeEnterBooks.DataSource = bul.GetDataSupplierManagement();
+            comboBoxSupplier_CodeEnterBooks.DisplayMember = "TenNCC";
+            comboBoxSupplier_CodeEnterBooks.ValueMember = "MaNCC";
+            comboBoxSupplier_CodeEnterBooks.Text = "<Hãy chọn tên NCC>";
 
-        #endregion
+        }
+        private void tabMuonTraSach_Click(object sender, EventArgs e)
+        {
 
-        // Action statistical 
-        #region
+        }
+
+        private void txtUserCode_BorrowAndReturnBooks_TextChanged(object sender, EventArgs e)
+        {
+
+        }
 
         private void btnLoc_Click(object sender, EventArgs e)
         {
+
+            
             
             dgvDocGia.DataSource = bull.GetData_thongke(Convert.ToDateTime(dateNgayMuon.Value), Convert.ToDateTime(DateDenNgay.Value));
             dgvSach.DataSource = bull.GetData_thongke1(Convert.ToDateTime(dateNgayMuon.Value), Convert.ToDateTime(DateDenNgay.Value));
         }
 
-        #endregion
+        private void dgvDocGia_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
 
+        private void dgvBooks_BookManagement_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-        //Action Book import
-        #region
+        }
+
+        private void dgvListBooksBorrow_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvSach_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void btnADD_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (bul.InsertBooksImport(txtMaPhieu.Text,txtBookcode_EnterBooks.Text,
-                    txtBookName_EnterBooks.Text,txtCategory_EnterBooks.Text,int.Parse(txtAmount_EnterBooks.Text)))
-                {
-                    dgvAddBooks.DataSource = bul.GetDataListBooks();
-                }
-            }
-            catch (Exception ex)
-            {
-
-            }
+            dataGridView1.Rows.Add(txtBookcode_EnterBooks.Text, txtAmount_EnterBooks.Text, txtTheLoai.Text, Convert.ToInt32(txtSoLuong.Text));
         }
 
-        private void btnRemoveBook_From_ListBook_EnterBooks_Click(object sender, EventArgs e)
+        private void btnInsert_EnterBooks_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (txtBookcode_EnterBooks.Text != "" && bul.DeleteBookFromListBooks(txtBookcode_EnterBooks.Text)) ;
-                {
-                    dgvAddBooks.DataSource = bul.GetDataListBooks();
-                }
-            }
-            catch(Exception ex)
-            {
-
-            }
+           
         }
 
-        private void dgvAddBooks_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int index = e.RowIndex;
-            if(index > 0)
-            {
-                txtBookcode_EnterBooks.Text = dgvEnterBooks.Rows[index].Cells[0].Value.ToString();
-                txtBookName_EnterBooks.Text = dgvEnterBooks.Rows[index].Cells[1].Value.ToString();
-                txtCategory_EnterBooks.Text = dgvEnterBooks.Rows[index].Cells[2].Value.ToString();
-                txtAmount_EnterBooks.Text = dgvEnterBooks.Rows[index].Cells[3].Value.ToString();
-                
-            }
-        }
+
 
 
         #endregion
+
+
+
+
         //Chuyen doi Form
         #region
         private void btnBorrowBooks_Click(object sender, EventArgs e)

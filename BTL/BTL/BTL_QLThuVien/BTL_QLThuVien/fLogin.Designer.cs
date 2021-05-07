@@ -81,11 +81,11 @@ namespace BTL_QLThuVien
             this.groupBox1.Controls.Add(this.radioUser);
             this.groupBox1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Beige;
-            this.groupBox1.Location = new System.Drawing.Point(127, 208);
+            this.groupBox1.Location = new System.Drawing.Point(127, 205);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(499, 76);
+            this.groupBox1.Size = new System.Drawing.Size(482, 76);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Phân Quyền";
@@ -157,12 +157,12 @@ namespace BTL_QLThuVien
             // txtMatKhau
             // 
             this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatKhau.Location = new System.Drawing.Point(299, 139);
+            this.txtMatKhau.Location = new System.Drawing.Point(299, 148);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4);
             this.txtMatKhau.Multiline = true;
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
-            this.txtMatKhau.Size = new System.Drawing.Size(310, 45);
+            this.txtMatKhau.Size = new System.Drawing.Size(310, 36);
             this.txtMatKhau.TabIndex = 2;
             // 
             // label1
@@ -192,11 +192,11 @@ namespace BTL_QLThuVien
             // txtTenDangNhap
             // 
             this.txtTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenDangNhap.Location = new System.Drawing.Point(299, 71);
+            this.txtTenDangNhap.Location = new System.Drawing.Point(299, 76);
             this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenDangNhap.Multiline = true;
             this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(310, 44);
+            this.txtTenDangNhap.Size = new System.Drawing.Size(310, 36);
             this.txtTenDangNhap.TabIndex = 1;
             // 
             // fLogin

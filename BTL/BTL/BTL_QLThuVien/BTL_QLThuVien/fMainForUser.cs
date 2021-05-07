@@ -30,14 +30,18 @@ namespace BTL_QLThuVien
         {
             InitializeComponent();
         }
-
+        
+        
         private void btnInPhieuMuon_Click(object sender, EventArgs e)
         {
+            
             fMuonSach_User f = new fMuonSach_User();
             f.FormClosed += new FormClosedEventHandler(fMuonSach_);
             f.Show();
             this.Hide();
+            
         }
+        
 
         private void fMuonSach_(object sender, EventArgs e)
         {
@@ -143,16 +147,16 @@ namespace BTL_QLThuVien
             fLogin f = new fLogin();
             f.FormClosed += new FormClosedEventHandler(fLogin1);
             f.Show();
-            this.Hide();
+            Application.Exit();
         }
         private void fLogin1 (object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void dgvMuonSach_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnThoat_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }

@@ -245,30 +245,6 @@ namespace BTL_QLThuVien
 
         #endregion
 
-        // Books Import
-        public DataTable GetDataBooksImport()
-        {
-            string sql = "Select * from ListBooks,NhapSach where ListBooks.MaPhieu = NhapSach.MaPhieu";
-            return dal.GetData(sql);
-        }
-
-        public DataTable GetDataListBooks()
-        {
-            string sql = "Select MaSach,TenSach,TheLoai,SoLuong from ListBooks";
-            return dal.GetData(sql);
-        }
-
-        public bool InsertBooksImport(string PromissoryNote_Code,string BookCode, string BookName, string Category, int Amount)
-        {
-            string sql = "insert into ListBooks values ( '"+PromissoryNote_Code+"' , '"+BookCode+"' ,N'"+BookName+"'  , N'"+Category+"' ,'"+Amount+"' )";
-            return dal.Execute(sql);
-        }
-
-        public bool DeleteBookFromListBooks( string BooksCode)
-        {
-            string sql = "delete form ListBooks where MaSach = '" + BooksCode + "'";
-            return dal.Execute(sql);
-        }
         //search by name
         public DataTable Search_By_Name(string name, string table)
         {

@@ -22,8 +22,14 @@ namespace BTL_QLThuVien
             fMuonSach_User_Load(sender, e);
             InitializeComponent();
         }
+        int maph = 1;
         private void fMuonSach_User_Load(object sender, EventArgs e)
         {
+            Random random = new Random();
+            txtMaPhieu1.Text = random.Next(1, 99999).ToString();
+            
+            
+            
             DataTable dt = bll.getDataTmpLogin();
             foreach (DataRow row in dt.Rows)
             {
