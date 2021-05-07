@@ -887,6 +887,9 @@ namespace BTL_QLThuVien
 
         #endregion
 
+        //
+
+
         //Load DataGirdView
         #region
 
@@ -936,7 +939,7 @@ namespace BTL_QLThuVien
             else if(tPAccount.SelectedIndex == 5)
             {
                 AddDataInCombobox();
-                   BULs b = new BULs();
+                BULs b = new BULs();
                 DataTable dt = b.GetData_tmp_Login();
                 foreach (DataRow row in dt.Rows)
                 {
@@ -945,7 +948,8 @@ namespace BTL_QLThuVien
               
                     break;
                 }
-               
+
+                dgvEnterBooks.DataSource = bul.GetDataPhieuNhap();
             }
         }
 
@@ -1009,7 +1013,7 @@ namespace BTL_QLThuVien
         }
         #endregion
 
-
+        
         //clear All textbox
         #region
         private void CleanForm(TabPage tb)
@@ -1044,53 +1048,151 @@ namespace BTL_QLThuVien
             comboBoxSupplier_CodeEnterBooks.Text = "<Hãy chọn tên NCC>";
 
         }
-        private void tabMuonTraSach_Click(object sender, EventArgs e)
-        {
 
-        }
+        #endregion
 
-        private void txtUserCode_BorrowAndReturnBooks_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        // Action statistical
 
         private void btnLoc_Click(object sender, EventArgs e)
         {
 
-            
-            
             dgvDocGia.DataSource = bull.GetData_thongke(Convert.ToDateTime(dateNgayMuon.Value), Convert.ToDateTime(DateDenNgay.Value));
             dgvSach.DataSource = bull.GetData_thongke1(Convert.ToDateTime(dateNgayMuon.Value), Convert.ToDateTime(DateDenNgay.Value));
         }
 
-        private void dgvDocGia_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
 
-        private void dgvBooks_BookManagement_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
 
-        private void dgvListBooksBorrow_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dgvSach_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+        // Action Book import
+        #region
         private void btnADD_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add(txtBookcode_EnterBooks.Text, txtAmount_EnterBooks.Text, txtTheLoai.Text, Convert.ToInt32(txtSoLuong.Text));
+            try
+            {
+                if(bul.Insert_Book_To_ListBook(txtFormCode_EnterBooks.Text,txtBookcode_EnterBooks.Text
+                    , txtBookName_EnterBooks.Text, txtCategory_EnterBooks.Text, int.Parse(txtAmount_EnterBooks.Text)))
+                {
+                    dgvListBook_EnterBooks.DataSource = bul.GetDataListBooks();
+                }
+                else
+                {
+                    MessageBox.Show("Dữ liệu nhập vào bị sai định dạng, độ dài hoặc bị trùng nhau.", "Error");
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (bul.Delete_Book_To_ListBooks(txtBookcode_EnterBooks.Text))
+                {
+                    dgvListBook_EnterBooks.DataSource = bul.GetDataListBooks();
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         private void btnInsert_EnterBooks_Click(object sender, EventArgs e)
         {
-           
+            try
+            {
+                if (bul.Insert_Phieu_Nhap(txtFormCode_EnterBooks.Text,comboBoxSupplier_CodeEnterBooks.SelectedValue.ToString(),
+                    comboBoxSupplier_CodeEnterBooks.Text,txtlibrarianCode_EnterBooks.Text,txtTenThuThu1.Text,
+                    dateTimePickerDate_EnterBooks.Value))
+                {
+                    dgvEnterBooks.DataSource = bul.GetDataPhieuNhap();
+                    MessageBox.Show("Nhập thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Nhập sách thất bại, xem lại dữ liệu", "Thông báo");
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void btnUpdate_EnterBooks_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (bul.Update_Phieu_Nhap(txtFormCode_EnterBooks.Text,txtBookcode_EnterBooks.Text,txtBookName_EnterBooks.Text,
+                    txtCategory_EnterBooks.Text,int.Parse(txtAmount_EnterBooks.Text),comboBoxSupplier_CodeEnterBooks.SelectedValue.ToString(),
+                    comboBoxSupplier_CodeEnterBooks.Text,dateTimePickerDate_EnterBooks.Value))
+                {
+                    dgvEnterBooks.DataSource = bul.GetDataPhieuNhap();
+                    MessageBox.Show("sửa thành công");
+                }
+                else
+                {
+                    MessageBox.Show("sửa sách thất bại, xem lại dữ liệu", "Thông báo");
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void btnDelete_EnterBooks_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (bul.Delete_Phieu_Nhap(txtFormCode_EnterBooks.Text,txtBookcode_EnterBooks.Text))
+                {
+                    dgvEnterBooks.DataSource = bul.GetDataPhieuNhap();
+                    MessageBox.Show("Xóa thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Xóa Thất bại. xem lại thông tin xóa", "Thông báo");
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+        }
+
+        private void dgvListBook_EnterBooks_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            if(index >= 0)
+            {
+                txtFormCode_EnterBooks.Text = dgvListBook_EnterBooks.Rows[index].Cells[0].Value.ToString();
+                txtBookcode_EnterBooks.Text = dgvListBook_EnterBooks.Rows[index].Cells[0].Value.ToString();
+                txtBookName_EnterBooks.Text = dgvListBook_EnterBooks.Rows[index].Cells[0].Value.ToString();
+                txtCategory_EnterBooks.Text = dgvListBook_EnterBooks.Rows[index].Cells[0].Value.ToString();
+                txtAmount_EnterBooks.Text = dgvListBook_EnterBooks.Rows[index].Cells[0].Value.ToString();
+            }
+        }
+
+        private void dgvEnterBooks_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            if (index >= 0)
+            {
+                txtFormCode_EnterBooks.Text = dgvEnterBooks.Rows[index].Cells[0].Value.ToString();
+                txtBookcode_EnterBooks.Text = dgvEnterBooks.Rows[index].Cells[1].Value.ToString();
+                txtBookName_EnterBooks.Text = dgvEnterBooks.Rows[index].Cells[2].Value.ToString();
+                txtCategory_EnterBooks.Text = dgvEnterBooks.Rows[index].Cells[3].Value.ToString();
+                txtAmount_EnterBooks.Text = dgvEnterBooks.Rows[index].Cells[4].Value.ToString();
+                comboBoxSupplier_CodeEnterBooks.Text = dgvEnterBooks.Rows[index].Cells[6].Value.ToString();
+                dateTimePickerDate_EnterBooks.Text = dgvEnterBooks.Rows[index].Cells[10].Value.ToString();
+
+                dgvListBook_EnterBooks.DataSource = bul.GetDataListBooks(txtFormCode_EnterBooks.Text);
+            }
         }
 
 

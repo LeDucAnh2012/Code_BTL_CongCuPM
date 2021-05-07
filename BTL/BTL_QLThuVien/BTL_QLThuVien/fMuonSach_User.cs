@@ -28,8 +28,6 @@ namespace BTL_QLThuVien
             Random random = new Random();
             txtMaPhieu1.Text = random.Next(1, 99999).ToString();
             
-            
-            
             DataTable dt = bll.getDataTmpLogin();
             foreach (DataRow row in dt.Rows)
             {

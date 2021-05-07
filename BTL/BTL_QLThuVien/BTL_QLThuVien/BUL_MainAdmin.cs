@@ -245,6 +245,57 @@ namespace BTL_QLThuVien
 
         #endregion
 
+        // Book Import
+        #region
+        public DataTable GetDataPhieuNhap()
+        {
+            string sql = "select * from ListBooks , NhapSach where NhapSach.MaPhieu = ListBooks.MaPhieu";
+            return dal.GetData(sql);
+        }
+
+        public bool Insert_Book_To_ListBook(string MaPhieu,string BookCode,string BookName, string Catogery,int Amount)
+        {
+            string sql = "insert into tmp_SachNhap values( '"+MaPhieu+"' , '"+BookCode+"' , N'"+BookName+"' , N'"+Catogery+"' , '"+Amount+"' )";
+            return dal.Execute(sql);
+        }
+
+        public DataTable GetDataListBooks()
+        {
+            string sql = "select * from tmp_SachNhap";
+            return dal.GetData(sql);
+        }
+
+        public DataTable GetDataListBooks(string MaPhieu)
+        {
+            string sql = "select * from ListBooks Where MaPhieu = '"+MaPhieu+"'";
+            return dal.GetData(sql);
+        }
+        public bool Delete_Book_To_ListBooks(string BookCode)
+        {
+            string sql = "delete from tmp_SachNhap Where MaSach = '" + BookCode + "'";
+            return dal.Execute(sql);
+        }
+
+        public bool Insert_Phieu_Nhap(string MaPhieu,string MaNCC ,string TenNCC , string MaTT,string TenTT,DateTime NgayNhap)
+        {
+            string sql = "INSERT INTO  ListBooks SELECT * FROM  tmp_SachNhap delete  from tmp_SachNhap insert into NhapSach values( '"+MaPhieu+"' , '"+MaNCC+"' , N'"+TenNCC+"', '"+MaTT+"', N'"+TenTT+"','"+NgayNhap+"')";
+            return dal.Execute(sql);
+        }
+
+        public bool Update_Phieu_Nhap(string MaPhieu,string bookCode,string bookName,string category, int amount, string MaNCC,string TenNCC,DateTime NgayNhap)
+        {
+            string sql = "update NhapSach set MaNCC = '"+MaNCC+"', TenNCC = N'"+TenNCC+"', NgayNhap = '"+NgayNhap+"' where MaPhieu = '"+MaPhieu+"' update ListBooks set TenSach = N'"+bookName+"', TheLoai = N'"+category+"',SoLuong = '"+amount+"' where MaPhieu = '"+MaPhieu+"' and MaSach = '"+bookCode+"'  ";
+            return dal.Execute(sql);
+        }
+
+        public bool Delete_Phieu_Nhap(string MaPhieu,string bookCode)
+        {
+            string sql = "delete from ListBooks where MaPhieu = '"+MaPhieu+"' and MaSach = '"+bookCode+"'";
+            return dal.Execute(sql);
+        }
+        #endregion
+
+
         //search by name
         public DataTable Search_By_Name(string name, string table)
         {

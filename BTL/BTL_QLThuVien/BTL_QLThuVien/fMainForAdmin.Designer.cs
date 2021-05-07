@@ -57,16 +57,18 @@ namespace BTL_QLThuVien
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelStatistical = new System.Windows.Forms.Label();
             this.tabNhapSach = new System.Windows.Forms.TabPage();
+            this.btnRemove = new System.Windows.Forms.Button();
             this.txtTenThuThu1 = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvListBook_EnterBooks = new System.Windows.Forms.DataGridView();
+            this.MaPhieu1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaSach2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSach2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTheLoai2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnADD = new System.Windows.Forms.Button();
-            this.txtSoLuong = new System.Windows.Forms.TextBox();
-            this.txtTheLoai = new System.Windows.Forms.TextBox();
+            this.txtAmount_EnterBooks = new System.Windows.Forms.TextBox();
+            this.txtCategory_EnterBooks = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.comboBoxSupplier_CodeEnterBooks = new System.Windows.Forms.ComboBox();
@@ -76,7 +78,7 @@ namespace BTL_QLThuVien
             this.btnInsert_EnterBooks = new System.Windows.Forms.Button();
             this.dateTimePickerDate_EnterBooks = new System.Windows.Forms.DateTimePicker();
             this.txtlibrarianCode_EnterBooks = new System.Windows.Forms.TextBox();
-            this.txtAmount_EnterBooks = new System.Windows.Forms.TextBox();
+            this.txtBookName_EnterBooks = new System.Windows.Forms.TextBox();
             this.txtBookcode_EnterBooks = new System.Windows.Forms.TextBox();
             this.txtFormCode_EnterBooks = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -246,7 +248,7 @@ namespace BTL_QLThuVien
             ((System.ComponentModel.ISupportInitialize)(this.dgvSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocGia)).BeginInit();
             this.tabNhapSach.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListBook_EnterBooks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnterBooks)).BeginInit();
             this.tabNCC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSuppliers)).BeginInit();
@@ -275,10 +277,9 @@ namespace BTL_QLThuVien
             this.tabThongKe.Controls.Add(this.dateNgayMuon);
             this.tabThongKe.Controls.Add(this.dgvDocGia);
             this.tabThongKe.Controls.Add(this.labelStatistical);
-            this.tabThongKe.Location = new System.Drawing.Point(4, 25);
-            this.tabThongKe.Margin = new System.Windows.Forms.Padding(4);
+            this.tabThongKe.Location = new System.Drawing.Point(4, 22);
             this.tabThongKe.Name = "tabThongKe";
-            this.tabThongKe.Size = new System.Drawing.Size(1112, 671);
+            this.tabThongKe.Size = new System.Drawing.Size(832, 543);
             this.tabThongKe.TabIndex = 3;
             this.tabThongKe.Text = "Thống kê";
             // 
@@ -287,9 +288,10 @@ namespace BTL_QLThuVien
             this.label52.AutoSize = true;
             this.label52.BackColor = System.Drawing.Color.Yellow;
             this.label52.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(3, 454);
+            this.label52.Location = new System.Drawing.Point(2, 369);
+            this.label52.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(259, 29);
+            this.label52.Size = new System.Drawing.Size(203, 23);
             this.label52.TabIndex = 61;
             this.label52.Text = "Danh sách sách đã mượn";
             // 
@@ -298,9 +300,10 @@ namespace BTL_QLThuVien
             this.label51.AutoSize = true;
             this.label51.BackColor = System.Drawing.Color.Yellow;
             this.label51.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.Location = new System.Drawing.Point(3, 218);
+            this.label51.Location = new System.Drawing.Point(2, 177);
+            this.label51.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(255, 29);
+            this.label51.Size = new System.Drawing.Size(199, 23);
             this.label51.TabIndex = 60;
             this.label51.Text = "Danh sách độc giả mượn";
             // 
@@ -310,9 +313,10 @@ namespace BTL_QLThuVien
             this.label30.AutoSize = true;
             this.label30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label30.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(561, 107);
+            this.label30.Location = new System.Drawing.Point(421, 87);
+            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(105, 29);
+            this.label30.Size = new System.Drawing.Size(82, 23);
             this.label30.TabIndex = 59;
             this.label30.Text = "Đến ngày";
             // 
@@ -321,9 +325,10 @@ namespace BTL_QLThuVien
             this.label29.AutoSize = true;
             this.label29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label29.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(59, 107);
+            this.label29.Location = new System.Drawing.Point(44, 87);
+            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(93, 29);
+            this.label29.Size = new System.Drawing.Size(72, 23);
             this.label29.TabIndex = 58;
             this.label29.Text = "Từ Ngày";
             // 
@@ -342,13 +347,11 @@ namespace BTL_QLThuVien
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
-            this.dgvSach.Location = new System.Drawing.Point(4, 487);
-            this.dgvSach.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvSach.Location = new System.Drawing.Point(6, 393);
             this.dgvSach.Name = "dgvSach";
             this.dgvSach.RowHeadersWidth = 51;
-            this.dgvSach.Size = new System.Drawing.Size(1104, 178);
+            this.dgvSach.Size = new System.Drawing.Size(815, 145);
             this.dgvSach.TabIndex = 57;
-            this.dgvSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSach_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -411,10 +414,9 @@ namespace BTL_QLThuVien
             this.btnLoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLoc.BackColor = System.Drawing.Color.Aqua;
             this.btnLoc.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoc.Location = new System.Drawing.Point(987, 97);
-            this.btnLoc.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLoc.Location = new System.Drawing.Point(740, 79);
             this.btnLoc.Name = "btnLoc";
-            this.btnLoc.Size = new System.Drawing.Size(105, 46);
+            this.btnLoc.Size = new System.Drawing.Size(79, 37);
             this.btnLoc.TabIndex = 56;
             this.btnLoc.Text = "Lọc";
             this.btnLoc.UseVisualStyleBackColor = false;
@@ -425,20 +427,18 @@ namespace BTL_QLThuVien
             this.DateDenNgay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DateDenNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateDenNgay.Location = new System.Drawing.Point(673, 107);
-            this.DateDenNgay.Margin = new System.Windows.Forms.Padding(4);
+            this.DateDenNgay.Location = new System.Drawing.Point(505, 87);
             this.DateDenNgay.Name = "DateDenNgay";
-            this.DateDenNgay.Size = new System.Drawing.Size(265, 30);
+            this.DateDenNgay.Size = new System.Drawing.Size(200, 26);
             this.DateDenNgay.TabIndex = 54;
             // 
             // dateNgayMuon
             // 
             this.dateNgayMuon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateNgayMuon.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateNgayMuon.Location = new System.Drawing.Point(159, 107);
-            this.dateNgayMuon.Margin = new System.Windows.Forms.Padding(4);
+            this.dateNgayMuon.Location = new System.Drawing.Point(119, 87);
             this.dateNgayMuon.Name = "dateNgayMuon";
-            this.dateNgayMuon.Size = new System.Drawing.Size(265, 30);
+            this.dateNgayMuon.Size = new System.Drawing.Size(200, 26);
             this.dateNgayMuon.TabIndex = 52;
             // 
             // dgvDocGia
@@ -457,13 +457,11 @@ namespace BTL_QLThuVien
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dgvDocGia.Location = new System.Drawing.Point(4, 251);
-            this.dgvDocGia.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvDocGia.Location = new System.Drawing.Point(6, 203);
             this.dgvDocGia.Name = "dgvDocGia";
             this.dgvDocGia.RowHeadersWidth = 51;
-            this.dgvDocGia.Size = new System.Drawing.Size(1104, 178);
+            this.dgvDocGia.Size = new System.Drawing.Size(818, 145);
             this.dgvDocGia.TabIndex = 51;
-            this.dgvDocGia.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDocGia_CellContentClick);
             // 
             // Column3
             // 
@@ -535,22 +533,22 @@ namespace BTL_QLThuVien
             this.labelStatistical.AutoSize = true;
             this.labelStatistical.BackColor = System.Drawing.Color.Yellow;
             this.labelStatistical.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStatistical.Location = new System.Drawing.Point(400, 18);
-            this.labelStatistical.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelStatistical.Location = new System.Drawing.Point(300, 15);
             this.labelStatistical.Name = "labelStatistical";
-            this.labelStatistical.Size = new System.Drawing.Size(169, 32);
+            this.labelStatistical.Size = new System.Drawing.Size(134, 26);
             this.labelStatistical.TabIndex = 50;
             this.labelStatistical.Text = "THỐNG KÊ";
             // 
             // tabNhapSach
             // 
             this.tabNhapSach.BackColor = System.Drawing.Color.Gray;
+            this.tabNhapSach.Controls.Add(this.btnRemove);
             this.tabNhapSach.Controls.Add(this.txtTenThuThu1);
             this.tabNhapSach.Controls.Add(this.label50);
-            this.tabNhapSach.Controls.Add(this.dataGridView1);
+            this.tabNhapSach.Controls.Add(this.dgvListBook_EnterBooks);
             this.tabNhapSach.Controls.Add(this.btnADD);
-            this.tabNhapSach.Controls.Add(this.txtSoLuong);
-            this.tabNhapSach.Controls.Add(this.txtTheLoai);
+            this.tabNhapSach.Controls.Add(this.txtAmount_EnterBooks);
+            this.tabNhapSach.Controls.Add(this.txtCategory_EnterBooks);
             this.tabNhapSach.Controls.Add(this.label48);
             this.tabNhapSach.Controls.Add(this.label49);
             this.tabNhapSach.Controls.Add(this.comboBoxSupplier_CodeEnterBooks);
@@ -560,7 +558,7 @@ namespace BTL_QLThuVien
             this.tabNhapSach.Controls.Add(this.btnInsert_EnterBooks);
             this.tabNhapSach.Controls.Add(this.dateTimePickerDate_EnterBooks);
             this.tabNhapSach.Controls.Add(this.txtlibrarianCode_EnterBooks);
-            this.tabNhapSach.Controls.Add(this.txtAmount_EnterBooks);
+            this.tabNhapSach.Controls.Add(this.txtBookName_EnterBooks);
             this.tabNhapSach.Controls.Add(this.txtBookcode_EnterBooks);
             this.tabNhapSach.Controls.Add(this.txtFormCode_EnterBooks);
             this.tabNhapSach.Controls.Add(this.label11);
@@ -570,122 +568,140 @@ namespace BTL_QLThuVien
             this.tabNhapSach.Controls.Add(this.label23);
             this.tabNhapSach.Controls.Add(this.label27);
             this.tabNhapSach.Controls.Add(this.dgvEnterBooks);
-            this.tabNhapSach.Location = new System.Drawing.Point(4, 25);
-            this.tabNhapSach.Margin = new System.Windows.Forms.Padding(4);
+            this.tabNhapSach.Location = new System.Drawing.Point(4, 22);
             this.tabNhapSach.Name = "tabNhapSach";
-            this.tabNhapSach.Size = new System.Drawing.Size(1112, 671);
+            this.tabNhapSach.Size = new System.Drawing.Size(832, 543);
             this.tabNhapSach.TabIndex = 5;
             this.tabNhapSach.Text = "Nhập sách";
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemove.BackColor = System.Drawing.Color.Aqua;
+            this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemove.Location = new System.Drawing.Point(729, 170);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(86, 38);
+            this.btnRemove.TabIndex = 59;
+            this.btnRemove.Text = "Remove";
+            this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // txtTenThuThu1
             // 
             this.txtTenThuThu1.Enabled = false;
-            this.txtTenThuThu1.Location = new System.Drawing.Point(147, 261);
-            this.txtTenThuThu1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenThuThu1.Location = new System.Drawing.Point(110, 212);
             this.txtTenThuThu1.Multiline = true;
             this.txtTenThuThu1.Name = "txtTenThuThu1";
-            this.txtTenThuThu1.Size = new System.Drawing.Size(301, 35);
+            this.txtTenThuThu1.Size = new System.Drawing.Size(227, 29);
             this.txtTenThuThu1.TabIndex = 58;
             // 
             // label50
             // 
             this.label50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label50.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(16, 260);
-            this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label50.Location = new System.Drawing.Point(12, 211);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(104, 25);
+            this.label50.Size = new System.Drawing.Size(78, 20);
             this.label50.TabIndex = 57;
             this.label50.Text = "Tên thủ thư";
             this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView1
+            // dgvListBook_EnterBooks
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvListBook_EnterBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvListBook_EnterBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListBook_EnterBooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaPhieu1,
             this.MaSach2,
             this.TenSach2,
             this.TenTheLoai2,
             this.SoLuong2});
-            this.dataGridView1.Location = new System.Drawing.Point(536, 262);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(551, 155);
-            this.dataGridView1.TabIndex = 56;
+            this.dgvListBook_EnterBooks.Location = new System.Drawing.Point(368, 212);
+            this.dgvListBook_EnterBooks.Name = "dgvListBook_EnterBooks";
+            this.dgvListBook_EnterBooks.RowHeadersWidth = 51;
+            this.dgvListBook_EnterBooks.Size = new System.Drawing.Size(461, 126);
+            this.dgvListBook_EnterBooks.TabIndex = 56;
+            this.dgvListBook_EnterBooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListBook_EnterBooks_CellClick);
+            // 
+            // MaPhieu1
+            // 
+            this.MaPhieu1.DataPropertyName = "MaPhieu";
+            this.MaPhieu1.HeaderText = "Mã Phiếu";
+            this.MaPhieu1.Name = "MaPhieu1";
+            this.MaPhieu1.Width = 60;
             // 
             // MaSach2
             // 
-            this.MaSach2.HeaderText = "MaSach";
+            this.MaSach2.DataPropertyName = "MaSach";
+            this.MaSach2.HeaderText = "Mã Sách";
             this.MaSach2.MinimumWidth = 6;
             this.MaSach2.Name = "MaSach2";
-            this.MaSach2.Width = 125;
+            this.MaSach2.Width = 60;
             // 
             // TenSach2
             // 
-            this.TenSach2.HeaderText = "TenSach";
+            this.TenSach2.DataPropertyName = "TenSach";
+            this.TenSach2.HeaderText = "Tên Sách";
             this.TenSach2.MinimumWidth = 6;
             this.TenSach2.Name = "TenSach2";
-            this.TenSach2.Width = 125;
+            this.TenSach2.Width = 140;
             // 
             // TenTheLoai2
             // 
-            this.TenTheLoai2.HeaderText = "TenTheLoai";
+            this.TenTheLoai2.DataPropertyName = "TheLoai";
+            this.TenTheLoai2.HeaderText = "Tên Thể Loại";
             this.TenTheLoai2.MinimumWidth = 6;
             this.TenTheLoai2.Name = "TenTheLoai2";
-            this.TenTheLoai2.Width = 125;
+            this.TenTheLoai2.Width = 80;
             // 
             // SoLuong2
             // 
-            this.SoLuong2.HeaderText = "SoLuong";
+            this.SoLuong2.DataPropertyName = "SoLuong";
+            this.SoLuong2.HeaderText = "Số Lượng";
             this.SoLuong2.MinimumWidth = 6;
             this.SoLuong2.Name = "SoLuong2";
-            this.SoLuong2.Width = 125;
+            this.SoLuong2.Width = 60;
             // 
             // btnADD
             // 
             this.btnADD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnADD.BackColor = System.Drawing.Color.Aqua;
             this.btnADD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnADD.Location = new System.Drawing.Point(973, 190);
-            this.btnADD.Margin = new System.Windows.Forms.Padding(4);
+            this.btnADD.Location = new System.Drawing.Point(729, 122);
             this.btnADD.Name = "btnADD";
-            this.btnADD.Size = new System.Drawing.Size(115, 50);
+            this.btnADD.Size = new System.Drawing.Size(86, 38);
             this.btnADD.TabIndex = 55;
-            this.btnADD.Text = "Add Sách";
+            this.btnADD.Text = "Add";
             this.btnADD.UseVisualStyleBackColor = false;
             this.btnADD.Click += new System.EventHandler(this.btnADD_Click);
             // 
-            // txtSoLuong
+            // txtAmount_EnterBooks
             // 
-            this.txtSoLuong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSoLuong.Location = new System.Drawing.Point(644, 208);
-            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSoLuong.Multiline = true;
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(312, 37);
-            this.txtSoLuong.TabIndex = 54;
+            this.txtAmount_EnterBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAmount_EnterBooks.Location = new System.Drawing.Point(483, 169);
+            this.txtAmount_EnterBooks.Multiline = true;
+            this.txtAmount_EnterBooks.Name = "txtAmount_EnterBooks";
+            this.txtAmount_EnterBooks.Size = new System.Drawing.Size(235, 31);
+            this.txtAmount_EnterBooks.TabIndex = 54;
             // 
-            // txtTheLoai
+            // txtCategory_EnterBooks
             // 
-            this.txtTheLoai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTheLoai.Location = new System.Drawing.Point(644, 162);
-            this.txtTheLoai.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTheLoai.Multiline = true;
-            this.txtTheLoai.Name = "txtTheLoai";
-            this.txtTheLoai.Size = new System.Drawing.Size(312, 35);
-            this.txtTheLoai.TabIndex = 52;
+            this.txtCategory_EnterBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCategory_EnterBooks.Location = new System.Drawing.Point(483, 132);
+            this.txtCategory_EnterBooks.Multiline = true;
+            this.txtCategory_EnterBooks.Name = "txtCategory_EnterBooks";
+            this.txtCategory_EnterBooks.Size = new System.Drawing.Size(235, 29);
+            this.txtCategory_EnterBooks.TabIndex = 52;
             // 
             // label48
             // 
             this.label48.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label48.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.Location = new System.Drawing.Point(532, 208);
-            this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label48.Location = new System.Drawing.Point(399, 169);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(104, 25);
+            this.label48.Size = new System.Drawing.Size(78, 20);
             this.label48.TabIndex = 53;
             this.label48.Text = "Số lượng";
             this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -695,10 +711,9 @@ namespace BTL_QLThuVien
             this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label49.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(532, 164);
-            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label49.Location = new System.Drawing.Point(399, 133);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(104, 25);
+            this.label49.Size = new System.Drawing.Size(78, 20);
             this.label49.TabIndex = 51;
             this.label49.Text = "Thể Loại";
             this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -707,10 +722,9 @@ namespace BTL_QLThuVien
             // 
             this.comboBoxSupplier_CodeEnterBooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSupplier_CodeEnterBooks.FormattingEnabled = true;
-            this.comboBoxSupplier_CodeEnterBooks.Location = new System.Drawing.Point(147, 116);
-            this.comboBoxSupplier_CodeEnterBooks.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxSupplier_CodeEnterBooks.Location = new System.Drawing.Point(110, 94);
             this.comboBoxSupplier_CodeEnterBooks.Name = "comboBoxSupplier_CodeEnterBooks";
-            this.comboBoxSupplier_CodeEnterBooks.Size = new System.Drawing.Size(301, 33);
+            this.comboBoxSupplier_CodeEnterBooks.Size = new System.Drawing.Size(227, 28);
             this.comboBoxSupplier_CodeEnterBooks.TabIndex = 50;
             // 
             // labelEnterBooks
@@ -719,10 +733,9 @@ namespace BTL_QLThuVien
             this.labelEnterBooks.AutoSize = true;
             this.labelEnterBooks.BackColor = System.Drawing.Color.Yellow;
             this.labelEnterBooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.labelEnterBooks.Location = new System.Drawing.Point(400, 18);
-            this.labelEnterBooks.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelEnterBooks.Location = new System.Drawing.Point(300, 15);
             this.labelEnterBooks.Name = "labelEnterBooks";
-            this.labelEnterBooks.Size = new System.Drawing.Size(159, 29);
+            this.labelEnterBooks.Size = new System.Drawing.Size(129, 24);
             this.labelEnterBooks.TabIndex = 49;
             this.labelEnterBooks.Text = "NHẬP SÁCH";
             // 
@@ -731,36 +744,35 @@ namespace BTL_QLThuVien
             this.btnDelete_EnterBooks.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnDelete_EnterBooks.BackColor = System.Drawing.Color.Red;
             this.btnDelete_EnterBooks.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete_EnterBooks.Location = new System.Drawing.Point(364, 338);
-            this.btnDelete_EnterBooks.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete_EnterBooks.Location = new System.Drawing.Point(256, 270);
             this.btnDelete_EnterBooks.Name = "btnDelete_EnterBooks";
-            this.btnDelete_EnterBooks.Size = new System.Drawing.Size(123, 49);
+            this.btnDelete_EnterBooks.Size = new System.Drawing.Size(92, 40);
             this.btnDelete_EnterBooks.TabIndex = 46;
             this.btnDelete_EnterBooks.Text = "Xóa";
             this.btnDelete_EnterBooks.UseVisualStyleBackColor = false;
+            this.btnDelete_EnterBooks.Click += new System.EventHandler(this.btnDelete_EnterBooks_Click);
             // 
             // btnUpdate_EnterBooks
             // 
             this.btnUpdate_EnterBooks.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnUpdate_EnterBooks.BackColor = System.Drawing.Color.Aqua;
             this.btnUpdate_EnterBooks.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate_EnterBooks.Location = new System.Drawing.Point(203, 338);
-            this.btnUpdate_EnterBooks.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdate_EnterBooks.Location = new System.Drawing.Point(135, 270);
             this.btnUpdate_EnterBooks.Name = "btnUpdate_EnterBooks";
-            this.btnUpdate_EnterBooks.Size = new System.Drawing.Size(125, 49);
+            this.btnUpdate_EnterBooks.Size = new System.Drawing.Size(94, 40);
             this.btnUpdate_EnterBooks.TabIndex = 45;
             this.btnUpdate_EnterBooks.Text = "Sửa";
             this.btnUpdate_EnterBooks.UseVisualStyleBackColor = false;
+            this.btnUpdate_EnterBooks.Click += new System.EventHandler(this.btnUpdate_EnterBooks_Click);
             // 
             // btnInsert_EnterBooks
             // 
             this.btnInsert_EnterBooks.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnInsert_EnterBooks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnInsert_EnterBooks.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsert_EnterBooks.Location = new System.Drawing.Point(45, 338);
-            this.btnInsert_EnterBooks.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInsert_EnterBooks.Location = new System.Drawing.Point(17, 270);
             this.btnInsert_EnterBooks.Name = "btnInsert_EnterBooks";
-            this.btnInsert_EnterBooks.Size = new System.Drawing.Size(123, 49);
+            this.btnInsert_EnterBooks.Size = new System.Drawing.Size(92, 40);
             this.btnInsert_EnterBooks.TabIndex = 44;
             this.btnInsert_EnterBooks.Text = "Thêm";
             this.btnInsert_EnterBooks.UseVisualStyleBackColor = false;
@@ -771,61 +783,55 @@ namespace BTL_QLThuVien
             this.dateTimePickerDate_EnterBooks.CustomFormat = "dd/MM/yyyy";
             this.dateTimePickerDate_EnterBooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerDate_EnterBooks.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerDate_EnterBooks.Location = new System.Drawing.Point(147, 164);
-            this.dateTimePickerDate_EnterBooks.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePickerDate_EnterBooks.Location = new System.Drawing.Point(110, 133);
             this.dateTimePickerDate_EnterBooks.Name = "dateTimePickerDate_EnterBooks";
-            this.dateTimePickerDate_EnterBooks.Size = new System.Drawing.Size(301, 32);
+            this.dateTimePickerDate_EnterBooks.Size = new System.Drawing.Size(227, 27);
             this.dateTimePickerDate_EnterBooks.TabIndex = 43;
             // 
             // txtlibrarianCode_EnterBooks
             // 
             this.txtlibrarianCode_EnterBooks.Enabled = false;
-            this.txtlibrarianCode_EnterBooks.Location = new System.Drawing.Point(147, 209);
-            this.txtlibrarianCode_EnterBooks.Margin = new System.Windows.Forms.Padding(4);
+            this.txtlibrarianCode_EnterBooks.Location = new System.Drawing.Point(110, 170);
             this.txtlibrarianCode_EnterBooks.Multiline = true;
             this.txtlibrarianCode_EnterBooks.Name = "txtlibrarianCode_EnterBooks";
-            this.txtlibrarianCode_EnterBooks.Size = new System.Drawing.Size(301, 37);
+            this.txtlibrarianCode_EnterBooks.Size = new System.Drawing.Size(227, 31);
             this.txtlibrarianCode_EnterBooks.TabIndex = 42;
             // 
-            // txtAmount_EnterBooks
+            // txtBookName_EnterBooks
             // 
-            this.txtAmount_EnterBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAmount_EnterBooks.Location = new System.Drawing.Point(644, 114);
-            this.txtAmount_EnterBooks.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAmount_EnterBooks.Multiline = true;
-            this.txtAmount_EnterBooks.Name = "txtAmount_EnterBooks";
-            this.txtAmount_EnterBooks.Size = new System.Drawing.Size(312, 37);
-            this.txtAmount_EnterBooks.TabIndex = 40;
+            this.txtBookName_EnterBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBookName_EnterBooks.Location = new System.Drawing.Point(483, 93);
+            this.txtBookName_EnterBooks.Multiline = true;
+            this.txtBookName_EnterBooks.Name = "txtBookName_EnterBooks";
+            this.txtBookName_EnterBooks.Size = new System.Drawing.Size(235, 31);
+            this.txtBookName_EnterBooks.TabIndex = 40;
             // 
             // txtBookcode_EnterBooks
             // 
             this.txtBookcode_EnterBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBookcode_EnterBooks.Location = new System.Drawing.Point(644, 68);
-            this.txtBookcode_EnterBooks.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBookcode_EnterBooks.Location = new System.Drawing.Point(483, 55);
             this.txtBookcode_EnterBooks.Multiline = true;
             this.txtBookcode_EnterBooks.Name = "txtBookcode_EnterBooks";
-            this.txtBookcode_EnterBooks.Size = new System.Drawing.Size(312, 35);
+            this.txtBookcode_EnterBooks.Size = new System.Drawing.Size(235, 29);
             this.txtBookcode_EnterBooks.TabIndex = 38;
             // 
             // txtFormCode_EnterBooks
             // 
             this.txtFormCode_EnterBooks.AllowDrop = true;
             this.txtFormCode_EnterBooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFormCode_EnterBooks.Location = new System.Drawing.Point(147, 68);
-            this.txtFormCode_EnterBooks.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFormCode_EnterBooks.Location = new System.Drawing.Point(110, 55);
             this.txtFormCode_EnterBooks.Multiline = true;
             this.txtFormCode_EnterBooks.Name = "txtFormCode_EnterBooks";
-            this.txtFormCode_EnterBooks.Size = new System.Drawing.Size(301, 34);
+            this.txtFormCode_EnterBooks.Size = new System.Drawing.Size(227, 28);
             this.txtFormCode_EnterBooks.TabIndex = 31;
             // 
             // label11
             // 
             this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label11.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(16, 214);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(12, 174);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(104, 25);
+            this.label11.Size = new System.Drawing.Size(78, 20);
             this.label11.TabIndex = 41;
             this.label11.Text = "Mã thủ thư";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -835,10 +841,9 @@ namespace BTL_QLThuVien
             this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label17.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(532, 121);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(399, 98);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(104, 25);
+            this.label17.Size = new System.Drawing.Size(78, 20);
             this.label17.TabIndex = 39;
             this.label17.Text = "Tên Sách";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -848,10 +853,9 @@ namespace BTL_QLThuVien
             this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label21.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(532, 76);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Location = new System.Drawing.Point(399, 62);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(104, 25);
+            this.label21.Size = new System.Drawing.Size(78, 20);
             this.label21.TabIndex = 37;
             this.label21.Text = "Mã sách";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -860,10 +864,9 @@ namespace BTL_QLThuVien
             // 
             this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label22.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(16, 122);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Location = new System.Drawing.Point(12, 99);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(104, 25);
+            this.label22.Size = new System.Drawing.Size(78, 20);
             this.label22.TabIndex = 35;
             this.label22.Text = "Mã NCC";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -872,10 +875,9 @@ namespace BTL_QLThuVien
             // 
             this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label23.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(16, 167);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Location = new System.Drawing.Point(12, 136);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(104, 25);
+            this.label23.Size = new System.Drawing.Size(78, 20);
             this.label23.TabIndex = 34;
             this.label23.Text = "Ngày nhập";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -884,10 +886,9 @@ namespace BTL_QLThuVien
             // 
             this.label27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label27.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(16, 76);
-            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Location = new System.Drawing.Point(12, 62);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(104, 25);
+            this.label27.Size = new System.Drawing.Size(78, 20);
             this.label27.TabIndex = 30;
             this.label27.Text = "Mã phiếu nhập";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -899,12 +900,12 @@ namespace BTL_QLThuVien
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEnterBooks.BackgroundColor = System.Drawing.Color.SeaGreen;
             this.dgvEnterBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEnterBooks.Location = new System.Drawing.Point(4, 425);
-            this.dgvEnterBooks.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvEnterBooks.Location = new System.Drawing.Point(3, 345);
             this.dgvEnterBooks.Name = "dgvEnterBooks";
             this.dgvEnterBooks.RowHeadersWidth = 51;
-            this.dgvEnterBooks.Size = new System.Drawing.Size(1101, 240);
+            this.dgvEnterBooks.Size = new System.Drawing.Size(826, 195);
             this.dgvEnterBooks.TabIndex = 29;
+            this.dgvEnterBooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEnterBooks_CellClick);
             // 
             // tabNCC
             // 
@@ -924,10 +925,9 @@ namespace BTL_QLThuVien
             this.tabNCC.Controls.Add(this.label19);
             this.tabNCC.Controls.Add(this.dgvSuppliers);
             this.tabNCC.Controls.Add(this.btnSearch_Supplier);
-            this.tabNCC.Location = new System.Drawing.Point(4, 25);
-            this.tabNCC.Margin = new System.Windows.Forms.Padding(4);
+            this.tabNCC.Location = new System.Drawing.Point(4, 22);
             this.tabNCC.Name = "tabNCC";
-            this.tabNCC.Size = new System.Drawing.Size(1112, 671);
+            this.tabNCC.Size = new System.Drawing.Size(832, 543);
             this.tabNCC.TabIndex = 4;
             this.tabNCC.Text = "Nhà cung cấp";
             // 
@@ -937,10 +937,9 @@ namespace BTL_QLThuVien
             this.labelSuppiler.AutoSize = true;
             this.labelSuppiler.BackColor = System.Drawing.Color.Yellow;
             this.labelSuppiler.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.labelSuppiler.Location = new System.Drawing.Point(400, 18);
-            this.labelSuppiler.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSuppiler.Location = new System.Drawing.Point(300, 15);
             this.labelSuppiler.Name = "labelSuppiler";
-            this.labelSuppiler.Size = new System.Drawing.Size(205, 29);
+            this.labelSuppiler.Size = new System.Drawing.Size(165, 24);
             this.labelSuppiler.TabIndex = 47;
             this.labelSuppiler.Text = "NHÀ CUNG CẤP";
             // 
@@ -949,10 +948,9 @@ namespace BTL_QLThuVien
             this.btnDeleteSupplier_Supplier.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnDeleteSupplier_Supplier.BackColor = System.Drawing.Color.Red;
             this.btnDeleteSupplier_Supplier.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteSupplier_Supplier.Location = new System.Drawing.Point(677, 218);
-            this.btnDeleteSupplier_Supplier.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDeleteSupplier_Supplier.Location = new System.Drawing.Point(508, 177);
             this.btnDeleteSupplier_Supplier.Name = "btnDeleteSupplier_Supplier";
-            this.btnDeleteSupplier_Supplier.Size = new System.Drawing.Size(129, 66);
+            this.btnDeleteSupplier_Supplier.Size = new System.Drawing.Size(97, 54);
             this.btnDeleteSupplier_Supplier.TabIndex = 6;
             this.btnDeleteSupplier_Supplier.Text = "Xóa";
             this.btnDeleteSupplier_Supplier.UseVisualStyleBackColor = false;
@@ -964,10 +962,9 @@ namespace BTL_QLThuVien
             this.btnUpdateSupplier_Supplier.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnUpdateSupplier_Supplier.BackColor = System.Drawing.Color.Aqua;
             this.btnUpdateSupplier_Supplier.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateSupplier_Supplier.Location = new System.Drawing.Point(496, 218);
-            this.btnUpdateSupplier_Supplier.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdateSupplier_Supplier.Location = new System.Drawing.Point(372, 177);
             this.btnUpdateSupplier_Supplier.Name = "btnUpdateSupplier_Supplier";
-            this.btnUpdateSupplier_Supplier.Size = new System.Drawing.Size(129, 66);
+            this.btnUpdateSupplier_Supplier.Size = new System.Drawing.Size(97, 54);
             this.btnUpdateSupplier_Supplier.TabIndex = 5;
             this.btnUpdateSupplier_Supplier.Text = "Sửa";
             this.btnUpdateSupplier_Supplier.UseVisualStyleBackColor = false;
@@ -978,10 +975,9 @@ namespace BTL_QLThuVien
             this.btnInsertSupplier_Supplier.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnInsertSupplier_Supplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnInsertSupplier_Supplier.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertSupplier_Supplier.Location = new System.Drawing.Point(307, 218);
-            this.btnInsertSupplier_Supplier.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInsertSupplier_Supplier.Location = new System.Drawing.Point(230, 177);
             this.btnInsertSupplier_Supplier.Name = "btnInsertSupplier_Supplier";
-            this.btnInsertSupplier_Supplier.Size = new System.Drawing.Size(133, 66);
+            this.btnInsertSupplier_Supplier.Size = new System.Drawing.Size(100, 54);
             this.btnInsertSupplier_Supplier.TabIndex = 4;
             this.btnInsertSupplier_Supplier.Text = "Thêm";
             this.btnInsertSupplier_Supplier.UseVisualStyleBackColor = false;
@@ -990,51 +986,46 @@ namespace BTL_QLThuVien
             // txtVendorPhoneNumber_Supplier
             // 
             this.txtVendorPhoneNumber_Supplier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVendorPhoneNumber_Supplier.Location = new System.Drawing.Point(695, 114);
-            this.txtVendorPhoneNumber_Supplier.Margin = new System.Windows.Forms.Padding(4);
+            this.txtVendorPhoneNumber_Supplier.Location = new System.Drawing.Point(521, 93);
             this.txtVendorPhoneNumber_Supplier.Multiline = true;
             this.txtVendorPhoneNumber_Supplier.Name = "txtVendorPhoneNumber_Supplier";
-            this.txtVendorPhoneNumber_Supplier.Size = new System.Drawing.Size(301, 35);
+            this.txtVendorPhoneNumber_Supplier.Size = new System.Drawing.Size(227, 29);
             this.txtVendorPhoneNumber_Supplier.TabIndex = 2;
             // 
             // txtAddressSupplier_Supplier
             // 
             this.txtAddressSupplier_Supplier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAddressSupplier_Supplier.Location = new System.Drawing.Point(695, 167);
-            this.txtAddressSupplier_Supplier.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAddressSupplier_Supplier.Location = new System.Drawing.Point(521, 136);
             this.txtAddressSupplier_Supplier.Multiline = true;
             this.txtAddressSupplier_Supplier.Name = "txtAddressSupplier_Supplier";
-            this.txtAddressSupplier_Supplier.Size = new System.Drawing.Size(301, 35);
+            this.txtAddressSupplier_Supplier.Size = new System.Drawing.Size(227, 29);
             this.txtAddressSupplier_Supplier.TabIndex = 3;
             // 
             // txtSupplierName_Supplier
             // 
-            this.txtSupplierName_Supplier.Location = new System.Drawing.Point(173, 167);
-            this.txtSupplierName_Supplier.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSupplierName_Supplier.Location = new System.Drawing.Point(130, 136);
             this.txtSupplierName_Supplier.Multiline = true;
             this.txtSupplierName_Supplier.Name = "txtSupplierName_Supplier";
-            this.txtSupplierName_Supplier.Size = new System.Drawing.Size(301, 35);
+            this.txtSupplierName_Supplier.Size = new System.Drawing.Size(227, 29);
             this.txtSupplierName_Supplier.TabIndex = 1;
             // 
             // txtSupplierCode_Supplier
             // 
             this.txtSupplierCode_Supplier.AllowDrop = true;
-            this.txtSupplierCode_Supplier.Location = new System.Drawing.Point(173, 114);
-            this.txtSupplierCode_Supplier.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSupplierCode_Supplier.Location = new System.Drawing.Point(130, 93);
             this.txtSupplierCode_Supplier.Multiline = true;
             this.txtSupplierCode_Supplier.Name = "txtSupplierCode_Supplier";
-            this.txtSupplierCode_Supplier.Size = new System.Drawing.Size(301, 34);
+            this.txtSupplierCode_Supplier.Size = new System.Drawing.Size(227, 28);
             this.txtSupplierCode_Supplier.TabIndex = 0;
             // 
             // txtSearch_Supplier
             // 
             this.txtSearch_Supplier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearch_Supplier.ForeColor = System.Drawing.Color.Gray;
-            this.txtSearch_Supplier.Location = new System.Drawing.Point(695, 62);
-            this.txtSearch_Supplier.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch_Supplier.Location = new System.Drawing.Point(521, 50);
             this.txtSearch_Supplier.Multiline = true;
             this.txtSearch_Supplier.Name = "txtSearch_Supplier";
-            this.txtSearch_Supplier.Size = new System.Drawing.Size(301, 36);
+            this.txtSearch_Supplier.Size = new System.Drawing.Size(227, 30);
             this.txtSearch_Supplier.TabIndex = 7;
             this.txtSearch_Supplier.Text = "Nhập Mã nhà cung cấp";
             // 
@@ -1043,10 +1034,9 @@ namespace BTL_QLThuVien
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label12.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(564, 126);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(423, 102);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(104, 25);
+            this.label12.Size = new System.Drawing.Size(78, 20);
             this.label12.TabIndex = 37;
             this.label12.Text = "SĐT";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1056,10 +1046,9 @@ namespace BTL_QLThuVien
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label13.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(564, 174);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(423, 141);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(104, 25);
+            this.label13.Size = new System.Drawing.Size(78, 20);
             this.label13.TabIndex = 35;
             this.label13.Text = "Địa chỉ";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1068,10 +1057,9 @@ namespace BTL_QLThuVien
             // 
             this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label18.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(44, 174);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Location = new System.Drawing.Point(33, 141);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(104, 25);
+            this.label18.Size = new System.Drawing.Size(78, 20);
             this.label18.TabIndex = 32;
             this.label18.Text = "Tên NCC";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1080,10 +1068,9 @@ namespace BTL_QLThuVien
             // 
             this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label19.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(44, 126);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Location = new System.Drawing.Point(33, 102);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(104, 25);
+            this.label19.Size = new System.Drawing.Size(78, 20);
             this.label19.TabIndex = 30;
             this.label19.Text = "Mã NCC";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1100,11 +1087,10 @@ namespace BTL_QLThuVien
             this.TenNCC,
             this.SDT2,
             this.DiaChi2});
-            this.dgvSuppliers.Location = new System.Drawing.Point(4, 292);
-            this.dgvSuppliers.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvSuppliers.Location = new System.Drawing.Point(3, 237);
             this.dgvSuppliers.Name = "dgvSuppliers";
             this.dgvSuppliers.RowHeadersWidth = 51;
-            this.dgvSuppliers.Size = new System.Drawing.Size(1104, 324);
+            this.dgvSuppliers.Size = new System.Drawing.Size(828, 263);
             this.dgvSuppliers.TabIndex = 29;
             this.dgvSuppliers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSuppliers_CellClick);
             // 
@@ -1144,10 +1130,9 @@ namespace BTL_QLThuVien
             // 
             this.btnSearch_Supplier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch_Supplier.BackColor = System.Drawing.Color.Aqua;
-            this.btnSearch_Supplier.Location = new System.Drawing.Point(1000, 62);
-            this.btnSearch_Supplier.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearch_Supplier.Location = new System.Drawing.Point(750, 50);
             this.btnSearch_Supplier.Name = "btnSearch_Supplier";
-            this.btnSearch_Supplier.Size = new System.Drawing.Size(108, 46);
+            this.btnSearch_Supplier.Size = new System.Drawing.Size(81, 37);
             this.btnSearch_Supplier.TabIndex = 11;
             this.btnSearch_Supplier.Text = "Tìm kiếm";
             this.btnSearch_Supplier.UseVisualStyleBackColor = false;
@@ -1175,11 +1160,10 @@ namespace BTL_QLThuVien
             this.tabQLSach.Controls.Add(this.label37);
             this.tabQLSach.Controls.Add(this.btnSearchBook_BookManagement);
             this.tabQLSach.Controls.Add(this.dgvBooks_BookManagement);
-            this.tabQLSach.Location = new System.Drawing.Point(4, 25);
-            this.tabQLSach.Margin = new System.Windows.Forms.Padding(4);
+            this.tabQLSach.Location = new System.Drawing.Point(4, 22);
             this.tabQLSach.Name = "tabQLSach";
-            this.tabQLSach.Padding = new System.Windows.Forms.Padding(4);
-            this.tabQLSach.Size = new System.Drawing.Size(1112, 671);
+            this.tabQLSach.Padding = new System.Windows.Forms.Padding(3);
+            this.tabQLSach.Size = new System.Drawing.Size(832, 543);
             this.tabQLSach.TabIndex = 7;
             this.tabQLSach.Text = "QL Sách";
             // 
@@ -1188,10 +1172,9 @@ namespace BTL_QLThuVien
             this.comboBoxCategoryCode_BookManagement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxCategoryCode_BookManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCategoryCode_BookManagement.FormattingEnabled = true;
-            this.comboBoxCategoryCode_BookManagement.Location = new System.Drawing.Point(684, 185);
-            this.comboBoxCategoryCode_BookManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxCategoryCode_BookManagement.Location = new System.Drawing.Point(513, 150);
             this.comboBoxCategoryCode_BookManagement.Name = "comboBoxCategoryCode_BookManagement";
-            this.comboBoxCategoryCode_BookManagement.Size = new System.Drawing.Size(312, 37);
+            this.comboBoxCategoryCode_BookManagement.Size = new System.Drawing.Size(235, 30);
             this.comboBoxCategoryCode_BookManagement.TabIndex = 5;
             // 
             // btnDeleteBook_BookManagement
@@ -1199,10 +1182,9 @@ namespace BTL_QLThuVien
             this.btnDeleteBook_BookManagement.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnDeleteBook_BookManagement.BackColor = System.Drawing.Color.Red;
             this.btnDeleteBook_BookManagement.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteBook_BookManagement.Location = new System.Drawing.Point(656, 240);
-            this.btnDeleteBook_BookManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDeleteBook_BookManagement.Location = new System.Drawing.Point(492, 195);
             this.btnDeleteBook_BookManagement.Name = "btnDeleteBook_BookManagement";
-            this.btnDeleteBook_BookManagement.Size = new System.Drawing.Size(131, 54);
+            this.btnDeleteBook_BookManagement.Size = new System.Drawing.Size(98, 44);
             this.btnDeleteBook_BookManagement.TabIndex = 8;
             this.btnDeleteBook_BookManagement.Text = "Xóa";
             this.btnDeleteBook_BookManagement.UseVisualStyleBackColor = false;
@@ -1213,10 +1195,9 @@ namespace BTL_QLThuVien
             this.btnUpdateBook_BookManagement.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnUpdateBook_BookManagement.BackColor = System.Drawing.Color.Aqua;
             this.btnUpdateBook_BookManagement.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateBook_BookManagement.Location = new System.Drawing.Point(453, 241);
-            this.btnUpdateBook_BookManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdateBook_BookManagement.Location = new System.Drawing.Point(340, 196);
             this.btnUpdateBook_BookManagement.Name = "btnUpdateBook_BookManagement";
-            this.btnUpdateBook_BookManagement.Size = new System.Drawing.Size(131, 53);
+            this.btnUpdateBook_BookManagement.Size = new System.Drawing.Size(98, 43);
             this.btnUpdateBook_BookManagement.TabIndex = 7;
             this.btnUpdateBook_BookManagement.Text = "Sửa";
             this.btnUpdateBook_BookManagement.UseVisualStyleBackColor = false;
@@ -1227,10 +1208,9 @@ namespace BTL_QLThuVien
             this.btnInsertBook_BookManagement.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnInsertBook_BookManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnInsertBook_BookManagement.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertBook_BookManagement.Location = new System.Drawing.Point(251, 241);
-            this.btnInsertBook_BookManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInsertBook_BookManagement.Location = new System.Drawing.Point(188, 196);
             this.btnInsertBook_BookManagement.Name = "btnInsertBook_BookManagement";
-            this.btnInsertBook_BookManagement.Size = new System.Drawing.Size(133, 53);
+            this.btnInsertBook_BookManagement.Size = new System.Drawing.Size(100, 43);
             this.btnInsertBook_BookManagement.TabIndex = 6;
             this.btnInsertBook_BookManagement.Text = "Thêm";
             this.btnInsertBook_BookManagement.UseVisualStyleBackColor = false;
@@ -1243,10 +1223,9 @@ namespace BTL_QLThuVien
             this.dateTimePickerDateAdded_BookManagement.CustomFormat = "dd/MM/yyyy";
             this.dateTimePickerDateAdded_BookManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerDateAdded_BookManagement.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerDateAdded_BookManagement.Location = new System.Drawing.Point(684, 94);
-            this.dateTimePickerDateAdded_BookManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePickerDateAdded_BookManagement.Location = new System.Drawing.Point(513, 76);
             this.dateTimePickerDateAdded_BookManagement.Name = "dateTimePickerDateAdded_BookManagement";
-            this.dateTimePickerDateAdded_BookManagement.Size = new System.Drawing.Size(312, 34);
+            this.dateTimePickerDateAdded_BookManagement.Size = new System.Drawing.Size(235, 28);
             this.dateTimePickerDateAdded_BookManagement.TabIndex = 3;
             // 
             // labelBooksManagement
@@ -1255,10 +1234,9 @@ namespace BTL_QLThuVien
             this.labelBooksManagement.AutoSize = true;
             this.labelBooksManagement.BackColor = System.Drawing.Color.Yellow;
             this.labelBooksManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBooksManagement.Location = new System.Drawing.Point(400, 18);
-            this.labelBooksManagement.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelBooksManagement.Location = new System.Drawing.Point(300, 15);
             this.labelBooksManagement.Name = "labelBooksManagement";
-            this.labelBooksManagement.Size = new System.Drawing.Size(200, 29);
+            this.labelBooksManagement.Size = new System.Drawing.Size(161, 24);
             this.labelBooksManagement.TabIndex = 45;
             this.labelBooksManagement.Text = "QUẢN LÝ SÁCH";
             this.labelBooksManagement.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1266,49 +1244,44 @@ namespace BTL_QLThuVien
             // txtStatusBook_BookManagement
             // 
             this.txtStatusBook_BookManagement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtStatusBook_BookManagement.Location = new System.Drawing.Point(684, 137);
-            this.txtStatusBook_BookManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.txtStatusBook_BookManagement.Location = new System.Drawing.Point(513, 111);
             this.txtStatusBook_BookManagement.Multiline = true;
             this.txtStatusBook_BookManagement.Name = "txtStatusBook_BookManagement";
-            this.txtStatusBook_BookManagement.Size = new System.Drawing.Size(312, 38);
+            this.txtStatusBook_BookManagement.Size = new System.Drawing.Size(235, 32);
             this.txtStatusBook_BookManagement.TabIndex = 4;
             // 
             // txtAmount_BookManagement
             // 
-            this.txtAmount_BookManagement.Location = new System.Drawing.Point(173, 183);
-            this.txtAmount_BookManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAmount_BookManagement.Location = new System.Drawing.Point(130, 149);
             this.txtAmount_BookManagement.Multiline = true;
             this.txtAmount_BookManagement.Name = "txtAmount_BookManagement";
-            this.txtAmount_BookManagement.Size = new System.Drawing.Size(301, 38);
+            this.txtAmount_BookManagement.Size = new System.Drawing.Size(227, 32);
             this.txtAmount_BookManagement.TabIndex = 2;
             // 
             // txtBookName_BookManagement
             // 
-            this.txtBookName_BookManagement.Location = new System.Drawing.Point(173, 137);
-            this.txtBookName_BookManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBookName_BookManagement.Location = new System.Drawing.Point(130, 111);
             this.txtBookName_BookManagement.Multiline = true;
             this.txtBookName_BookManagement.Name = "txtBookName_BookManagement";
-            this.txtBookName_BookManagement.Size = new System.Drawing.Size(301, 38);
+            this.txtBookName_BookManagement.Size = new System.Drawing.Size(227, 32);
             this.txtBookName_BookManagement.TabIndex = 1;
             // 
             // txtBookCode_BookManagement
             // 
             this.txtBookCode_BookManagement.AllowDrop = true;
-            this.txtBookCode_BookManagement.Location = new System.Drawing.Point(173, 89);
-            this.txtBookCode_BookManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBookCode_BookManagement.Location = new System.Drawing.Point(130, 72);
             this.txtBookCode_BookManagement.Multiline = true;
             this.txtBookCode_BookManagement.Name = "txtBookCode_BookManagement";
-            this.txtBookCode_BookManagement.Size = new System.Drawing.Size(301, 40);
+            this.txtBookCode_BookManagement.Size = new System.Drawing.Size(227, 33);
             this.txtBookCode_BookManagement.TabIndex = 0;
             // 
             // txtSearchBook_BookManagement
             // 
             this.txtSearchBook_BookManagement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearchBook_BookManagement.ForeColor = System.Drawing.Color.Gray;
-            this.txtSearchBook_BookManagement.Location = new System.Drawing.Point(684, 64);
-            this.txtSearchBook_BookManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearchBook_BookManagement.Location = new System.Drawing.Point(513, 52);
             this.txtSearchBook_BookManagement.Name = "txtSearchBook_BookManagement";
-            this.txtSearchBook_BookManagement.Size = new System.Drawing.Size(312, 22);
+            this.txtSearchBook_BookManagement.Size = new System.Drawing.Size(235, 20);
             this.txtSearchBook_BookManagement.TabIndex = 9;
             this.txtSearchBook_BookManagement.Text = "Nhập Mã Sách";
             // 
@@ -1317,10 +1290,9 @@ namespace BTL_QLThuVien
             this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label32.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(561, 194);
-            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Location = new System.Drawing.Point(421, 158);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(115, 26);
+            this.label32.Size = new System.Drawing.Size(86, 21);
             this.label32.TabIndex = 41;
             this.label32.Text = "Mã thể loại";
             // 
@@ -1329,10 +1301,9 @@ namespace BTL_QLThuVien
             this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label33.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(561, 153);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Location = new System.Drawing.Point(421, 124);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(115, 22);
+            this.label33.Size = new System.Drawing.Size(86, 18);
             this.label33.TabIndex = 39;
             this.label33.Text = "Tình trạng";
             // 
@@ -1340,10 +1311,9 @@ namespace BTL_QLThuVien
             // 
             this.label34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label34.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(44, 197);
-            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label34.Location = new System.Drawing.Point(33, 160);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(104, 25);
+            this.label34.Size = new System.Drawing.Size(78, 20);
             this.label34.TabIndex = 37;
             this.label34.Text = "Số Luợng";
             // 
@@ -1352,10 +1322,9 @@ namespace BTL_QLThuVien
             this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label35.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(561, 103);
-            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label35.Location = new System.Drawing.Point(421, 84);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(112, 25);
+            this.label35.Size = new System.Drawing.Size(84, 20);
             this.label35.TabIndex = 36;
             this.label35.Text = "Ngày nhập";
             // 
@@ -1363,10 +1332,9 @@ namespace BTL_QLThuVien
             // 
             this.label36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label36.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(44, 150);
-            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label36.Location = new System.Drawing.Point(33, 122);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(104, 25);
+            this.label36.Size = new System.Drawing.Size(78, 20);
             this.label36.TabIndex = 34;
             this.label36.Text = "Tên sách";
             // 
@@ -1374,10 +1342,9 @@ namespace BTL_QLThuVien
             // 
             this.label37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label37.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(44, 103);
-            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label37.Location = new System.Drawing.Point(33, 84);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(104, 25);
+            this.label37.Size = new System.Drawing.Size(78, 20);
             this.label37.TabIndex = 32;
             this.label37.Text = "Mã sách";
             // 
@@ -1386,10 +1353,9 @@ namespace BTL_QLThuVien
             this.btnSearchBook_BookManagement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearchBook_BookManagement.BackColor = System.Drawing.Color.Aqua;
             this.btnSearchBook_BookManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchBook_BookManagement.Location = new System.Drawing.Point(1008, 62);
-            this.btnSearchBook_BookManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearchBook_BookManagement.Location = new System.Drawing.Point(756, 50);
             this.btnSearchBook_BookManagement.Name = "btnSearchBook_BookManagement";
-            this.btnSearchBook_BookManagement.Size = new System.Drawing.Size(96, 43);
+            this.btnSearchBook_BookManagement.Size = new System.Drawing.Size(72, 35);
             this.btnSearchBook_BookManagement.TabIndex = 10;
             this.btnSearchBook_BookManagement.Text = "Tìm kiếm";
             this.btnSearchBook_BookManagement.UseVisualStyleBackColor = false;
@@ -1409,14 +1375,12 @@ namespace BTL_QLThuVien
             this.NgayNhap,
             this.TinhTrang,
             this.TenTheLoai});
-            this.dgvBooks_BookManagement.Location = new System.Drawing.Point(8, 305);
-            this.dgvBooks_BookManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvBooks_BookManagement.Location = new System.Drawing.Point(6, 248);
             this.dgvBooks_BookManagement.Name = "dgvBooks_BookManagement";
             this.dgvBooks_BookManagement.RowHeadersWidth = 51;
-            this.dgvBooks_BookManagement.Size = new System.Drawing.Size(1096, 315);
+            this.dgvBooks_BookManagement.Size = new System.Drawing.Size(822, 256);
             this.dgvBooks_BookManagement.TabIndex = 29;
             this.dgvBooks_BookManagement.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_BookManagement_CellClick);
-            this.dgvBooks_BookManagement.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_BookManagement_CellContentClick);
             // 
             // MaSach
             // 
@@ -1495,11 +1459,10 @@ namespace BTL_QLThuVien
             this.tabDocGia.Controls.Add(this.btnSearchUser_UsersManagement);
             this.tabDocGia.Controls.Add(this.dgvUser_UserManagement);
             this.tabDocGia.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabDocGia.Location = new System.Drawing.Point(4, 25);
-            this.tabDocGia.Margin = new System.Windows.Forms.Padding(4);
+            this.tabDocGia.Location = new System.Drawing.Point(4, 22);
             this.tabDocGia.Name = "tabDocGia";
-            this.tabDocGia.Padding = new System.Windows.Forms.Padding(4);
-            this.tabDocGia.Size = new System.Drawing.Size(1112, 671);
+            this.tabDocGia.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDocGia.Size = new System.Drawing.Size(832, 543);
             this.tabDocGia.TabIndex = 1;
             this.tabDocGia.Text = "Độc giả";
             // 
@@ -1509,51 +1472,46 @@ namespace BTL_QLThuVien
             this.dateTimePickerRegistrationDate.CustomFormat = "dd/MM/yyyy";
             this.dateTimePickerRegistrationDate.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerRegistrationDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerRegistrationDate.Location = new System.Drawing.Point(669, 219);
-            this.dateTimePickerRegistrationDate.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePickerRegistrationDate.Location = new System.Drawing.Point(502, 178);
             this.dateTimePickerRegistrationDate.Name = "dateTimePickerRegistrationDate";
-            this.dateTimePickerRegistrationDate.Size = new System.Drawing.Size(312, 34);
+            this.dateTimePickerRegistrationDate.Size = new System.Drawing.Size(235, 29);
             this.dateTimePickerRegistrationDate.TabIndex = 10;
             // 
             // txtPassWord_UserMagament
             // 
             this.txtPassWord_UserMagament.AllowDrop = true;
-            this.txtPassWord_UserMagament.Location = new System.Drawing.Point(173, 96);
-            this.txtPassWord_UserMagament.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassWord_UserMagament.Location = new System.Drawing.Point(130, 78);
             this.txtPassWord_UserMagament.Multiline = true;
             this.txtPassWord_UserMagament.Name = "txtPassWord_UserMagament";
-            this.txtPassWord_UserMagament.Size = new System.Drawing.Size(301, 35);
+            this.txtPassWord_UserMagament.Size = new System.Drawing.Size(227, 29);
             this.txtPassWord_UserMagament.TabIndex = 3;
             // 
             // label38
             // 
             this.label38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label38.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(44, 110);
-            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label38.Location = new System.Drawing.Point(33, 89);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(121, 22);
+            this.label38.Size = new System.Drawing.Size(91, 18);
             this.label38.TabIndex = 9;
             this.label38.Text = "Mật Khẩu";
             // 
             // txtUserName_UserManagement
             // 
             this.txtUserName_UserManagement.AllowDrop = true;
-            this.txtUserName_UserManagement.Location = new System.Drawing.Point(173, 54);
-            this.txtUserName_UserManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUserName_UserManagement.Location = new System.Drawing.Point(130, 44);
             this.txtUserName_UserManagement.Multiline = true;
             this.txtUserName_UserManagement.Name = "txtUserName_UserManagement";
-            this.txtUserName_UserManagement.Size = new System.Drawing.Size(301, 34);
+            this.txtUserName_UserManagement.Size = new System.Drawing.Size(227, 28);
             this.txtUserName_UserManagement.TabIndex = 2;
             // 
             // label31
             // 
             this.label31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label31.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(44, 65);
-            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label31.Location = new System.Drawing.Point(33, 53);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(121, 22);
+            this.label31.Size = new System.Drawing.Size(91, 18);
             this.label31.TabIndex = 8;
             this.label31.Text = "Tên Đăng Nhập";
             // 
@@ -1562,10 +1520,9 @@ namespace BTL_QLThuVien
             this.btnDeleteUser_UserManagement.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnDeleteUser_UserManagement.BackColor = System.Drawing.Color.Red;
             this.btnDeleteUser_UserManagement.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteUser_UserManagement.Location = new System.Drawing.Point(716, 271);
-            this.btnDeleteUser_UserManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDeleteUser_UserManagement.Location = new System.Drawing.Point(537, 220);
             this.btnDeleteUser_UserManagement.Name = "btnDeleteUser_UserManagement";
-            this.btnDeleteUser_UserManagement.Size = new System.Drawing.Size(124, 50);
+            this.btnDeleteUser_UserManagement.Size = new System.Drawing.Size(93, 41);
             this.btnDeleteUser_UserManagement.TabIndex = 13;
             this.btnDeleteUser_UserManagement.Text = "Xóa";
             this.btnDeleteUser_UserManagement.UseVisualStyleBackColor = false;
@@ -1576,10 +1533,9 @@ namespace BTL_QLThuVien
             this.btnUpdateUser_UserManagement.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnUpdateUser_UserManagement.BackColor = System.Drawing.Color.Aqua;
             this.btnUpdateUser_UserManagement.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateUser_UserManagement.Location = new System.Drawing.Point(485, 272);
-            this.btnUpdateUser_UserManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdateUser_UserManagement.Location = new System.Drawing.Point(364, 221);
             this.btnUpdateUser_UserManagement.Name = "btnUpdateUser_UserManagement";
-            this.btnUpdateUser_UserManagement.Size = new System.Drawing.Size(131, 50);
+            this.btnUpdateUser_UserManagement.Size = new System.Drawing.Size(98, 41);
             this.btnUpdateUser_UserManagement.TabIndex = 12;
             this.btnUpdateUser_UserManagement.Text = "Sửa";
             this.btnUpdateUser_UserManagement.UseVisualStyleBackColor = false;
@@ -1590,10 +1546,9 @@ namespace BTL_QLThuVien
             this.btnInsertUser_UserManagement.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnInsertUser_UserManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnInsertUser_UserManagement.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertUser_UserManagement.Location = new System.Drawing.Point(259, 272);
-            this.btnInsertUser_UserManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInsertUser_UserManagement.Location = new System.Drawing.Point(194, 221);
             this.btnInsertUser_UserManagement.Name = "btnInsertUser_UserManagement";
-            this.btnInsertUser_UserManagement.Size = new System.Drawing.Size(133, 50);
+            this.btnInsertUser_UserManagement.Size = new System.Drawing.Size(100, 41);
             this.btnInsertUser_UserManagement.TabIndex = 11;
             this.btnInsertUser_UserManagement.Text = "Thêm";
             this.btnInsertUser_UserManagement.UseVisualStyleBackColor = false;
@@ -1604,10 +1559,9 @@ namespace BTL_QLThuVien
             this.dateTimePikerDateOfBirthUser_UsersManagement.CustomFormat = "dd/MM/yyyy";
             this.dateTimePikerDateOfBirthUser_UsersManagement.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePikerDateOfBirthUser_UsersManagement.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePikerDateOfBirthUser_UsersManagement.Location = new System.Drawing.Point(173, 230);
-            this.dateTimePikerDateOfBirthUser_UsersManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePikerDateOfBirthUser_UsersManagement.Location = new System.Drawing.Point(130, 187);
             this.dateTimePikerDateOfBirthUser_UsersManagement.Name = "dateTimePikerDateOfBirthUser_UsersManagement";
-            this.dateTimePikerDateOfBirthUser_UsersManagement.Size = new System.Drawing.Size(301, 34);
+            this.dateTimePikerDateOfBirthUser_UsersManagement.Size = new System.Drawing.Size(227, 29);
             this.dateTimePikerDateOfBirthUser_UsersManagement.TabIndex = 6;
             // 
             // labelUserManagement
@@ -1616,10 +1570,9 @@ namespace BTL_QLThuVien
             this.labelUserManagement.AutoSize = true;
             this.labelUserManagement.BackColor = System.Drawing.Color.Yellow;
             this.labelUserManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUserManagement.Location = new System.Drawing.Point(400, 18);
-            this.labelUserManagement.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelUserManagement.Location = new System.Drawing.Point(300, 15);
             this.labelUserManagement.Name = "labelUserManagement";
-            this.labelUserManagement.Size = new System.Drawing.Size(236, 29);
+            this.labelUserManagement.Size = new System.Drawing.Size(189, 24);
             this.labelUserManagement.TabIndex = 24;
             this.labelUserManagement.Text = "QUẢN LÝ ĐỘC GIẢ";
             this.labelUserManagement.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1627,61 +1580,55 @@ namespace BTL_QLThuVien
             // txtCCCDUser_UsersManagement
             // 
             this.txtCCCDUser_UsersManagement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCCCDUser_UsersManagement.Location = new System.Drawing.Point(669, 177);
-            this.txtCCCDUser_UsersManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCCCDUser_UsersManagement.Location = new System.Drawing.Point(502, 144);
             this.txtCCCDUser_UsersManagement.Multiline = true;
             this.txtCCCDUser_UsersManagement.Name = "txtCCCDUser_UsersManagement";
-            this.txtCCCDUser_UsersManagement.Size = new System.Drawing.Size(312, 34);
+            this.txtCCCDUser_UsersManagement.Size = new System.Drawing.Size(235, 28);
             this.txtCCCDUser_UsersManagement.TabIndex = 9;
             // 
             // txtPhoneNumberUser_UsersManagement
             // 
             this.txtPhoneNumberUser_UsersManagement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPhoneNumberUser_UsersManagement.Location = new System.Drawing.Point(669, 133);
-            this.txtPhoneNumberUser_UsersManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPhoneNumberUser_UsersManagement.Location = new System.Drawing.Point(502, 108);
             this.txtPhoneNumberUser_UsersManagement.Multiline = true;
             this.txtPhoneNumberUser_UsersManagement.Name = "txtPhoneNumberUser_UsersManagement";
-            this.txtPhoneNumberUser_UsersManagement.Size = new System.Drawing.Size(312, 36);
+            this.txtPhoneNumberUser_UsersManagement.Size = new System.Drawing.Size(235, 30);
             this.txtPhoneNumberUser_UsersManagement.TabIndex = 8;
             // 
             // txtAddressUser_UsersManagement
             // 
             this.txtAddressUser_UsersManagement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAddressUser_UsersManagement.Location = new System.Drawing.Point(669, 89);
-            this.txtAddressUser_UsersManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAddressUser_UsersManagement.Location = new System.Drawing.Point(502, 72);
             this.txtAddressUser_UsersManagement.Multiline = true;
             this.txtAddressUser_UsersManagement.Name = "txtAddressUser_UsersManagement";
-            this.txtAddressUser_UsersManagement.Size = new System.Drawing.Size(312, 37);
+            this.txtAddressUser_UsersManagement.Size = new System.Drawing.Size(235, 31);
             this.txtAddressUser_UsersManagement.TabIndex = 7;
             // 
             // txtUserName_UsersManagement
             // 
-            this.txtUserName_UsersManagement.Location = new System.Drawing.Point(173, 186);
-            this.txtUserName_UsersManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUserName_UsersManagement.Location = new System.Drawing.Point(130, 151);
             this.txtUserName_UsersManagement.Multiline = true;
             this.txtUserName_UsersManagement.Name = "txtUserName_UsersManagement";
-            this.txtUserName_UsersManagement.Size = new System.Drawing.Size(301, 36);
+            this.txtUserName_UsersManagement.Size = new System.Drawing.Size(227, 30);
             this.txtUserName_UsersManagement.TabIndex = 5;
             // 
             // txtUserCode_UsersManagement
             // 
             this.txtUserCode_UsersManagement.AllowDrop = true;
-            this.txtUserCode_UsersManagement.Location = new System.Drawing.Point(173, 139);
-            this.txtUserCode_UsersManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUserCode_UsersManagement.Location = new System.Drawing.Point(130, 113);
             this.txtUserCode_UsersManagement.Multiline = true;
             this.txtUserCode_UsersManagement.Name = "txtUserCode_UsersManagement";
-            this.txtUserCode_UsersManagement.Size = new System.Drawing.Size(301, 38);
+            this.txtUserCode_UsersManagement.Size = new System.Drawing.Size(227, 32);
             this.txtUserCode_UsersManagement.TabIndex = 4;
             // 
             // txtSearchUser_UsersManagement
             // 
             this.txtSearchUser_UsersManagement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearchUser_UsersManagement.ForeColor = System.Drawing.Color.Gray;
-            this.txtSearchUser_UsersManagement.Location = new System.Drawing.Point(669, 54);
-            this.txtSearchUser_UsersManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearchUser_UsersManagement.Location = new System.Drawing.Point(502, 44);
             this.txtSearchUser_UsersManagement.Multiline = true;
             this.txtSearchUser_UsersManagement.Name = "txtSearchUser_UsersManagement";
-            this.txtSearchUser_UsersManagement.Size = new System.Drawing.Size(312, 24);
+            this.txtSearchUser_UsersManagement.Size = new System.Drawing.Size(235, 20);
             this.txtSearchUser_UsersManagement.TabIndex = 14;
             this.txtSearchUser_UsersManagement.Text = "Nhập Tên Đăng Nhập";
             // 
@@ -1690,10 +1637,9 @@ namespace BTL_QLThuVien
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label7.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(549, 231);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(412, 188);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 22);
+            this.label7.Size = new System.Drawing.Size(86, 18);
             this.label7.TabIndex = 22;
             this.label7.Text = "Ngày đăng ký";
             // 
@@ -1702,10 +1648,9 @@ namespace BTL_QLThuVien
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label6.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(549, 188);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(412, 153);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 22);
+            this.label6.Size = new System.Drawing.Size(86, 18);
             this.label6.TabIndex = 20;
             this.label6.Text = "CCCD";
             // 
@@ -1714,10 +1659,9 @@ namespace BTL_QLThuVien
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label5.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(549, 145);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(412, 118);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 22);
+            this.label5.Size = new System.Drawing.Size(86, 18);
             this.label5.TabIndex = 18;
             this.label5.Text = "SĐT";
             // 
@@ -1726,10 +1670,9 @@ namespace BTL_QLThuVien
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label4.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(551, 102);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(413, 83);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 22);
+            this.label4.Size = new System.Drawing.Size(85, 18);
             this.label4.TabIndex = 16;
             this.label4.Text = "Địa chỉ";
             // 
@@ -1737,10 +1680,9 @@ namespace BTL_QLThuVien
             // 
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label3.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(44, 241);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(33, 196);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 22);
+            this.label3.Size = new System.Drawing.Size(91, 18);
             this.label3.TabIndex = 14;
             this.label3.Text = "Ngày sinh";
             // 
@@ -1748,10 +1690,9 @@ namespace BTL_QLThuVien
             // 
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label2.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(44, 197);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(33, 160);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 22);
+            this.label2.Size = new System.Drawing.Size(91, 18);
             this.label2.TabIndex = 12;
             this.label2.Text = "Tên độc giả";
             // 
@@ -1759,10 +1700,9 @@ namespace BTL_QLThuVien
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 153);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(33, 124);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 22);
+            this.label1.Size = new System.Drawing.Size(91, 18);
             this.label1.TabIndex = 10;
             this.label1.Text = "Mã độc giả";
             // 
@@ -1770,10 +1710,9 @@ namespace BTL_QLThuVien
             // 
             this.btnSearchUser_UsersManagement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearchUser_UsersManagement.BackColor = System.Drawing.Color.Aqua;
-            this.btnSearchUser_UsersManagement.Location = new System.Drawing.Point(993, 54);
-            this.btnSearchUser_UsersManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearchUser_UsersManagement.Location = new System.Drawing.Point(745, 44);
             this.btnSearchUser_UsersManagement.Name = "btnSearchUser_UsersManagement";
-            this.btnSearchUser_UsersManagement.Size = new System.Drawing.Size(115, 39);
+            this.btnSearchUser_UsersManagement.Size = new System.Drawing.Size(86, 32);
             this.btnSearchUser_UsersManagement.TabIndex = 15;
             this.btnSearchUser_UsersManagement.Text = "Tìm kiếm";
             this.btnSearchUser_UsersManagement.UseVisualStyleBackColor = false;
@@ -1796,11 +1735,10 @@ namespace BTL_QLThuVien
             this.SDT1,
             this.CCCD1,
             this.NgayDangKy});
-            this.dgvUser_UserManagement.Location = new System.Drawing.Point(8, 330);
-            this.dgvUser_UserManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvUser_UserManagement.Location = new System.Drawing.Point(6, 268);
             this.dgvUser_UserManagement.Name = "dgvUser_UserManagement";
             this.dgvUser_UserManagement.RowHeadersWidth = 51;
-            this.dgvUser_UserManagement.Size = new System.Drawing.Size(1096, 295);
+            this.dgvUser_UserManagement.Size = new System.Drawing.Size(822, 240);
             this.dgvUser_UserManagement.TabIndex = 3;
             this.dgvUser_UserManagement.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_UserManagement_CellClick);
             // 
@@ -1904,11 +1842,10 @@ namespace BTL_QLThuVien
             this.tabLibrarian.Controls.Add(this.label44);
             this.tabLibrarian.Controls.Add(this.label45);
             this.tabLibrarian.Controls.Add(this.dgvLibrarian);
-            this.tabLibrarian.Location = new System.Drawing.Point(4, 25);
-            this.tabLibrarian.Margin = new System.Windows.Forms.Padding(4);
+            this.tabLibrarian.Location = new System.Drawing.Point(4, 22);
             this.tabLibrarian.Name = "tabLibrarian";
-            this.tabLibrarian.Padding = new System.Windows.Forms.Padding(4);
-            this.tabLibrarian.Size = new System.Drawing.Size(1112, 671);
+            this.tabLibrarian.Padding = new System.Windows.Forms.Padding(3);
+            this.tabLibrarian.Size = new System.Drawing.Size(832, 543);
             this.tabLibrarian.TabIndex = 0;
             this.tabLibrarian.Text = "Thủ Thư";
             // 
@@ -1917,10 +1854,9 @@ namespace BTL_QLThuVien
             this.btnSearchLibrarian.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearchLibrarian.BackColor = System.Drawing.Color.Aqua;
             this.btnSearchLibrarian.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchLibrarian.Location = new System.Drawing.Point(995, 46);
-            this.btnSearchLibrarian.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearchLibrarian.Location = new System.Drawing.Point(746, 37);
             this.btnSearchLibrarian.Name = "btnSearchLibrarian";
-            this.btnSearchLibrarian.Size = new System.Drawing.Size(109, 37);
+            this.btnSearchLibrarian.Size = new System.Drawing.Size(82, 30);
             this.btnSearchLibrarian.TabIndex = 13;
             this.btnSearchLibrarian.Text = "Tìm kiếm";
             this.btnSearchLibrarian.UseVisualStyleBackColor = false;
@@ -1932,51 +1868,46 @@ namespace BTL_QLThuVien
             this.dateTimePickerDateBeginWorkLibrarian.CustomFormat = "dd/MM/yyyy";
             this.dateTimePickerDateBeginWorkLibrarian.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerDateBeginWorkLibrarian.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerDateBeginWorkLibrarian.Location = new System.Drawing.Point(668, 229);
-            this.dateTimePickerDateBeginWorkLibrarian.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePickerDateBeginWorkLibrarian.Location = new System.Drawing.Point(501, 186);
             this.dateTimePickerDateBeginWorkLibrarian.Name = "dateTimePickerDateBeginWorkLibrarian";
-            this.dateTimePickerDateBeginWorkLibrarian.Size = new System.Drawing.Size(312, 34);
+            this.dateTimePickerDateBeginWorkLibrarian.Size = new System.Drawing.Size(235, 28);
             this.dateTimePickerDateBeginWorkLibrarian.TabIndex = 8;
             // 
             // txtPassWordLibrarion
             // 
             this.txtPassWordLibrarion.AllowDrop = true;
-            this.txtPassWordLibrarion.Location = new System.Drawing.Point(172, 94);
-            this.txtPassWordLibrarion.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassWordLibrarion.Location = new System.Drawing.Point(129, 76);
             this.txtPassWordLibrarion.Multiline = true;
             this.txtPassWordLibrarion.Name = "txtPassWordLibrarion";
-            this.txtPassWordLibrarion.Size = new System.Drawing.Size(301, 35);
+            this.txtPassWordLibrarion.Size = new System.Drawing.Size(227, 29);
             this.txtPassWordLibrarion.TabIndex = 1;
             // 
             // label9
             // 
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label9.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(43, 103);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(32, 84);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(121, 22);
+            this.label9.Size = new System.Drawing.Size(91, 18);
             this.label9.TabIndex = 84;
             this.label9.Text = "Mật Khẩu";
             // 
             // txtNameLoginLibrarian
             // 
             this.txtNameLoginLibrarian.AllowDrop = true;
-            this.txtNameLoginLibrarian.Location = new System.Drawing.Point(172, 50);
-            this.txtNameLoginLibrarian.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNameLoginLibrarian.Location = new System.Drawing.Point(129, 41);
             this.txtNameLoginLibrarian.Multiline = true;
             this.txtNameLoginLibrarian.Name = "txtNameLoginLibrarian";
-            this.txtNameLoginLibrarian.Size = new System.Drawing.Size(301, 34);
+            this.txtNameLoginLibrarian.Size = new System.Drawing.Size(227, 28);
             this.txtNameLoginLibrarian.TabIndex = 0;
             // 
             // label15
             // 
             this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label15.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(43, 59);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(32, 48);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(121, 22);
+            this.label15.Size = new System.Drawing.Size(91, 18);
             this.label15.TabIndex = 82;
             this.label15.Text = "Tên Đăng Nhập";
             // 
@@ -1985,10 +1916,9 @@ namespace BTL_QLThuVien
             this.btnDeleteLibrarian.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnDeleteLibrarian.BackColor = System.Drawing.Color.Red;
             this.btnDeleteLibrarian.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteLibrarian.Location = new System.Drawing.Point(671, 272);
-            this.btnDeleteLibrarian.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDeleteLibrarian.Location = new System.Drawing.Point(503, 221);
             this.btnDeleteLibrarian.Name = "btnDeleteLibrarian";
-            this.btnDeleteLibrarian.Size = new System.Drawing.Size(133, 54);
+            this.btnDeleteLibrarian.Size = new System.Drawing.Size(100, 44);
             this.btnDeleteLibrarian.TabIndex = 11;
             this.btnDeleteLibrarian.Text = "Xóa";
             this.btnDeleteLibrarian.UseVisualStyleBackColor = false;
@@ -1999,10 +1929,9 @@ namespace BTL_QLThuVien
             this.btnUpdateLibrarian.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnUpdateLibrarian.BackColor = System.Drawing.Color.Aqua;
             this.btnUpdateLibrarian.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateLibrarian.Location = new System.Drawing.Point(465, 272);
-            this.btnUpdateLibrarian.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdateLibrarian.Location = new System.Drawing.Point(349, 221);
             this.btnUpdateLibrarian.Name = "btnUpdateLibrarian";
-            this.btnUpdateLibrarian.Size = new System.Drawing.Size(133, 54);
+            this.btnUpdateLibrarian.Size = new System.Drawing.Size(100, 44);
             this.btnUpdateLibrarian.TabIndex = 10;
             this.btnUpdateLibrarian.Text = "Sửa";
             this.btnUpdateLibrarian.UseVisualStyleBackColor = false;
@@ -2013,10 +1942,9 @@ namespace BTL_QLThuVien
             this.btnInsertLibrarian.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnInsertLibrarian.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnInsertLibrarian.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertLibrarian.Location = new System.Drawing.Point(252, 272);
-            this.btnInsertLibrarian.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInsertLibrarian.Location = new System.Drawing.Point(189, 221);
             this.btnInsertLibrarian.Name = "btnInsertLibrarian";
-            this.btnInsertLibrarian.Size = new System.Drawing.Size(133, 54);
+            this.btnInsertLibrarian.Size = new System.Drawing.Size(100, 44);
             this.btnInsertLibrarian.TabIndex = 9;
             this.btnInsertLibrarian.Text = "Thêm";
             this.btnInsertLibrarian.UseVisualStyleBackColor = false;
@@ -2028,10 +1956,9 @@ namespace BTL_QLThuVien
             this.dateTimePickerDateOfBirthLibrarian.CustomFormat = "dd/MM/yyyy";
             this.dateTimePickerDateOfBirthLibrarian.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerDateOfBirthLibrarian.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerDateOfBirthLibrarian.Location = new System.Drawing.Point(172, 230);
-            this.dateTimePickerDateOfBirthLibrarian.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePickerDateOfBirthLibrarian.Location = new System.Drawing.Point(129, 187);
             this.dateTimePickerDateOfBirthLibrarian.Name = "dateTimePickerDateOfBirthLibrarian";
-            this.dateTimePickerDateOfBirthLibrarian.Size = new System.Drawing.Size(301, 34);
+            this.dateTimePickerDateOfBirthLibrarian.Size = new System.Drawing.Size(227, 28);
             this.dateTimePickerDateOfBirthLibrarian.TabIndex = 4;
             // 
             // labelLibrarian
@@ -2040,10 +1967,9 @@ namespace BTL_QLThuVien
             this.labelLibrarian.AutoSize = true;
             this.labelLibrarian.BackColor = System.Drawing.Color.Yellow;
             this.labelLibrarian.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLibrarian.Location = new System.Drawing.Point(399, 18);
-            this.labelLibrarian.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelLibrarian.Location = new System.Drawing.Point(299, 15);
             this.labelLibrarian.Name = "labelLibrarian";
-            this.labelLibrarian.Size = new System.Drawing.Size(244, 29);
+            this.labelLibrarian.Size = new System.Drawing.Size(195, 24);
             this.labelLibrarian.TabIndex = 77;
             this.labelLibrarian.Text = "QUẢN LÝ THỦ THƯ";
             this.labelLibrarian.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2051,61 +1977,55 @@ namespace BTL_QLThuVien
             // txtCCCDLibrarian
             // 
             this.txtCCCDLibrarian.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCCCDLibrarian.Location = new System.Drawing.Point(668, 187);
-            this.txtCCCDLibrarian.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCCCDLibrarian.Location = new System.Drawing.Point(501, 152);
             this.txtCCCDLibrarian.Multiline = true;
             this.txtCCCDLibrarian.Name = "txtCCCDLibrarian";
-            this.txtCCCDLibrarian.Size = new System.Drawing.Size(312, 34);
+            this.txtCCCDLibrarian.Size = new System.Drawing.Size(235, 28);
             this.txtCCCDLibrarian.TabIndex = 7;
             // 
             // txtPhoneNumberLibrarian
             // 
             this.txtPhoneNumberLibrarian.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPhoneNumberLibrarian.Location = new System.Drawing.Point(668, 143);
-            this.txtPhoneNumberLibrarian.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPhoneNumberLibrarian.Location = new System.Drawing.Point(501, 116);
             this.txtPhoneNumberLibrarian.Multiline = true;
             this.txtPhoneNumberLibrarian.Name = "txtPhoneNumberLibrarian";
-            this.txtPhoneNumberLibrarian.Size = new System.Drawing.Size(312, 36);
+            this.txtPhoneNumberLibrarian.Size = new System.Drawing.Size(235, 30);
             this.txtPhoneNumberLibrarian.TabIndex = 6;
             // 
             // txtAddressLibrarian
             // 
             this.txtAddressLibrarian.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAddressLibrarian.Location = new System.Drawing.Point(668, 100);
-            this.txtAddressLibrarian.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAddressLibrarian.Location = new System.Drawing.Point(501, 81);
             this.txtAddressLibrarian.Multiline = true;
             this.txtAddressLibrarian.Name = "txtAddressLibrarian";
-            this.txtAddressLibrarian.Size = new System.Drawing.Size(312, 35);
+            this.txtAddressLibrarian.Size = new System.Drawing.Size(235, 29);
             this.txtAddressLibrarian.TabIndex = 5;
             // 
             // txtLibrarianName
             // 
-            this.txtLibrarianName.Location = new System.Drawing.Point(172, 185);
-            this.txtLibrarianName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLibrarianName.Location = new System.Drawing.Point(129, 150);
             this.txtLibrarianName.Multiline = true;
             this.txtLibrarianName.Name = "txtLibrarianName";
-            this.txtLibrarianName.Size = new System.Drawing.Size(301, 38);
+            this.txtLibrarianName.Size = new System.Drawing.Size(227, 32);
             this.txtLibrarianName.TabIndex = 3;
             // 
             // txtLibrarianCode
             // 
             this.txtLibrarianCode.AllowDrop = true;
-            this.txtLibrarianCode.Location = new System.Drawing.Point(172, 135);
-            this.txtLibrarianCode.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLibrarianCode.Location = new System.Drawing.Point(129, 110);
             this.txtLibrarianCode.Multiline = true;
             this.txtLibrarianCode.Name = "txtLibrarianCode";
-            this.txtLibrarianCode.Size = new System.Drawing.Size(301, 40);
+            this.txtLibrarianCode.Size = new System.Drawing.Size(227, 33);
             this.txtLibrarianCode.TabIndex = 2;
             // 
             // txtSearchLibrarian
             // 
             this.txtSearchLibrarian.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearchLibrarian.ForeColor = System.Drawing.Color.Gray;
-            this.txtSearchLibrarian.Location = new System.Drawing.Point(668, 46);
-            this.txtSearchLibrarian.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearchLibrarian.Location = new System.Drawing.Point(501, 37);
             this.txtSearchLibrarian.Multiline = true;
             this.txtSearchLibrarian.Name = "txtSearchLibrarian";
-            this.txtSearchLibrarian.Size = new System.Drawing.Size(312, 35);
+            this.txtSearchLibrarian.Size = new System.Drawing.Size(235, 29);
             this.txtSearchLibrarian.TabIndex = 12;
             this.txtSearchLibrarian.Text = "Nhập Tên Đăng Nhập";
             // 
@@ -2114,10 +2034,9 @@ namespace BTL_QLThuVien
             this.label39.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label39.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(548, 235);
-            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label39.Location = new System.Drawing.Point(411, 191);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(115, 22);
+            this.label39.Size = new System.Drawing.Size(86, 18);
             this.label39.TabIndex = 76;
             this.label39.Text = "Ngày vào làm";
             // 
@@ -2126,10 +2045,9 @@ namespace BTL_QLThuVien
             this.label40.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label40.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(548, 192);
-            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label40.Location = new System.Drawing.Point(411, 156);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(115, 22);
+            this.label40.Size = new System.Drawing.Size(86, 18);
             this.label40.TabIndex = 74;
             this.label40.Text = "CCCD";
             // 
@@ -2138,10 +2056,9 @@ namespace BTL_QLThuVien
             this.label41.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label41.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(548, 149);
-            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label41.Location = new System.Drawing.Point(411, 121);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(115, 22);
+            this.label41.Size = new System.Drawing.Size(86, 18);
             this.label41.TabIndex = 72;
             this.label41.Text = "SĐT";
             // 
@@ -2150,10 +2067,9 @@ namespace BTL_QLThuVien
             this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label42.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(549, 106);
-            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label42.Location = new System.Drawing.Point(412, 86);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(113, 22);
+            this.label42.Size = new System.Drawing.Size(85, 18);
             this.label42.TabIndex = 70;
             this.label42.Text = "Địa chỉ";
             // 
@@ -2161,10 +2077,9 @@ namespace BTL_QLThuVien
             // 
             this.label43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label43.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(43, 235);
-            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label43.Location = new System.Drawing.Point(32, 191);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(121, 22);
+            this.label43.Size = new System.Drawing.Size(91, 18);
             this.label43.TabIndex = 69;
             this.label43.Text = "Ngày sinh";
             // 
@@ -2172,10 +2087,9 @@ namespace BTL_QLThuVien
             // 
             this.label44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label44.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(43, 191);
-            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label44.Location = new System.Drawing.Point(32, 155);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(121, 22);
+            this.label44.Size = new System.Drawing.Size(91, 18);
             this.label44.TabIndex = 67;
             this.label44.Text = "Tên thủ thư";
             // 
@@ -2183,10 +2097,9 @@ namespace BTL_QLThuVien
             // 
             this.label45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label45.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(43, 146);
-            this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label45.Location = new System.Drawing.Point(32, 119);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(121, 22);
+            this.label45.Size = new System.Drawing.Size(91, 18);
             this.label45.TabIndex = 65;
             this.label45.Text = "Mã thủ thư";
             // 
@@ -2207,11 +2120,10 @@ namespace BTL_QLThuVien
             this.SDT,
             this.CCCD,
             this.NgayVaoLam});
-            this.dgvLibrarian.Location = new System.Drawing.Point(8, 334);
-            this.dgvLibrarian.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvLibrarian.Location = new System.Drawing.Point(6, 271);
             this.dgvLibrarian.Name = "dgvLibrarian";
             this.dgvLibrarian.RowHeadersWidth = 51;
-            this.dgvLibrarian.Size = new System.Drawing.Size(1096, 281);
+            this.dgvLibrarian.Size = new System.Drawing.Size(822, 228);
             this.dgvLibrarian.TabIndex = 63;
             this.dgvLibrarian.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLibrarian_CellClick);
             // 
@@ -2321,23 +2233,20 @@ namespace BTL_QLThuVien
             this.tabMuonTraSach.Controls.Add(this.btnBorrowBooks);
             this.tabMuonTraSach.Controls.Add(this.label24);
             this.tabMuonTraSach.Controls.Add(this.dgvBorrowAndReturnBooks);
-            this.tabMuonTraSach.Location = new System.Drawing.Point(4, 25);
-            this.tabMuonTraSach.Margin = new System.Windows.Forms.Padding(4);
+            this.tabMuonTraSach.Location = new System.Drawing.Point(4, 22);
             this.tabMuonTraSach.Name = "tabMuonTraSach";
-            this.tabMuonTraSach.Padding = new System.Windows.Forms.Padding(4);
-            this.tabMuonTraSach.Size = new System.Drawing.Size(1112, 671);
+            this.tabMuonTraSach.Padding = new System.Windows.Forms.Padding(3);
+            this.tabMuonTraSach.Size = new System.Drawing.Size(832, 543);
             this.tabMuonTraSach.TabIndex = 2;
             this.tabMuonTraSach.Text = "Mượn - Trả sách";
-            this.tabMuonTraSach.Click += new System.EventHandler(this.tabMuonTraSach_Click);
             // 
             // btnConfirm_Borrow
             // 
             this.btnConfirm_Borrow.BackColor = System.Drawing.Color.Aqua;
             this.btnConfirm_Borrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm_Borrow.Location = new System.Drawing.Point(933, 181);
-            this.btnConfirm_Borrow.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConfirm_Borrow.Location = new System.Drawing.Point(700, 147);
             this.btnConfirm_Borrow.Name = "btnConfirm_Borrow";
-            this.btnConfirm_Borrow.Size = new System.Drawing.Size(99, 64);
+            this.btnConfirm_Borrow.Size = new System.Drawing.Size(74, 52);
             this.btnConfirm_Borrow.TabIndex = 3;
             this.btnConfirm_Borrow.Text = "OK";
             this.btnConfirm_Borrow.UseVisualStyleBackColor = false;
@@ -2348,10 +2257,9 @@ namespace BTL_QLThuVien
             this.txtAmont_Borrow.AllowDrop = true;
             this.txtAmont_Borrow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtAmont_Borrow.Location = new System.Drawing.Point(731, 219);
-            this.txtAmont_Borrow.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAmont_Borrow.Location = new System.Drawing.Point(548, 178);
             this.txtAmont_Borrow.Name = "txtAmont_Borrow";
-            this.txtAmont_Borrow.Size = new System.Drawing.Size(195, 22);
+            this.txtAmont_Borrow.Size = new System.Drawing.Size(147, 20);
             this.txtAmont_Borrow.TabIndex = 2;
             // 
             // txtBookCode_Borrow
@@ -2359,40 +2267,36 @@ namespace BTL_QLThuVien
             this.txtBookCode_Borrow.AllowDrop = true;
             this.txtBookCode_Borrow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtBookCode_Borrow.Location = new System.Drawing.Point(160, 187);
-            this.txtBookCode_Borrow.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBookCode_Borrow.Location = new System.Drawing.Point(120, 152);
             this.txtBookCode_Borrow.Name = "txtBookCode_Borrow";
-            this.txtBookCode_Borrow.Size = new System.Drawing.Size(301, 22);
+            this.txtBookCode_Borrow.Size = new System.Drawing.Size(227, 20);
             this.txtBookCode_Borrow.TabIndex = 74;
             // 
             // label47
             // 
             this.label47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label47.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(31, 190);
-            this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label47.Location = new System.Drawing.Point(23, 154);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(104, 18);
+            this.label47.Size = new System.Drawing.Size(78, 15);
             this.label47.TabIndex = 73;
             this.label47.Text = "Mã sách";
             // 
             // dateTimePickerDateBorrow
             // 
             this.dateTimePickerDateBorrow.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerDateBorrow.Location = new System.Drawing.Point(731, 183);
-            this.dateTimePickerDateBorrow.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePickerDateBorrow.Location = new System.Drawing.Point(548, 149);
             this.dateTimePickerDateBorrow.Name = "dateTimePickerDateBorrow";
-            this.dateTimePickerDateBorrow.Size = new System.Drawing.Size(195, 22);
+            this.dateTimePickerDateBorrow.Size = new System.Drawing.Size(147, 20);
             this.dateTimePickerDateBorrow.TabIndex = 1;
             // 
             // label28
             // 
             this.label28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label28.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(601, 219);
-            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Location = new System.Drawing.Point(451, 178);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(104, 18);
+            this.label28.Size = new System.Drawing.Size(78, 15);
             this.label28.TabIndex = 70;
             this.label28.Text = "Số ngày";
             // 
@@ -2400,10 +2304,9 @@ namespace BTL_QLThuVien
             // 
             this.label46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label46.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(601, 187);
-            this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label46.Location = new System.Drawing.Point(451, 152);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(104, 18);
+            this.label46.Size = new System.Drawing.Size(78, 15);
             this.label46.TabIndex = 69;
             this.label46.Text = "Ngày Mượn";
             // 
@@ -2413,20 +2316,18 @@ namespace BTL_QLThuVien
             this.txtPhoneNumberLibrarian_Borrow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtPhoneNumberLibrarian_Borrow.Enabled = false;
-            this.txtPhoneNumberLibrarian_Borrow.Location = new System.Drawing.Point(731, 151);
-            this.txtPhoneNumberLibrarian_Borrow.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPhoneNumberLibrarian_Borrow.Location = new System.Drawing.Point(548, 123);
             this.txtPhoneNumberLibrarian_Borrow.Name = "txtPhoneNumberLibrarian_Borrow";
-            this.txtPhoneNumberLibrarian_Borrow.Size = new System.Drawing.Size(301, 22);
+            this.txtPhoneNumberLibrarian_Borrow.Size = new System.Drawing.Size(227, 20);
             this.txtPhoneNumberLibrarian_Borrow.TabIndex = 68;
             // 
             // label20
             // 
             this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label20.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(601, 154);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Location = new System.Drawing.Point(451, 125);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(104, 18);
+            this.label20.Size = new System.Drawing.Size(78, 15);
             this.label20.TabIndex = 67;
             this.label20.Text = "Số điện thoại";
             // 
@@ -2436,10 +2337,9 @@ namespace BTL_QLThuVien
             this.txtLibrarianName_Borrow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtLibrarianName_Borrow.Enabled = false;
-            this.txtLibrarianName_Borrow.Location = new System.Drawing.Point(731, 119);
-            this.txtLibrarianName_Borrow.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLibrarianName_Borrow.Location = new System.Drawing.Point(548, 97);
             this.txtLibrarianName_Borrow.Name = "txtLibrarianName_Borrow";
-            this.txtLibrarianName_Borrow.Size = new System.Drawing.Size(301, 22);
+            this.txtLibrarianName_Borrow.Size = new System.Drawing.Size(227, 20);
             this.txtLibrarianName_Borrow.TabIndex = 66;
             // 
             // txtLibrarian_Borrow
@@ -2448,20 +2348,18 @@ namespace BTL_QLThuVien
             this.txtLibrarian_Borrow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtLibrarian_Borrow.Enabled = false;
-            this.txtLibrarian_Borrow.Location = new System.Drawing.Point(731, 87);
-            this.txtLibrarian_Borrow.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLibrarian_Borrow.Location = new System.Drawing.Point(548, 71);
             this.txtLibrarian_Borrow.Name = "txtLibrarian_Borrow";
-            this.txtLibrarian_Borrow.Size = new System.Drawing.Size(301, 22);
+            this.txtLibrarian_Borrow.Size = new System.Drawing.Size(227, 20);
             this.txtLibrarian_Borrow.TabIndex = 64;
             // 
             // label25
             // 
             this.label25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label25.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(601, 122);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Location = new System.Drawing.Point(451, 99);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(104, 18);
+            this.label25.Size = new System.Drawing.Size(78, 15);
             this.label25.TabIndex = 65;
             this.label25.Text = "Tên thủ thư";
             // 
@@ -2469,10 +2367,9 @@ namespace BTL_QLThuVien
             // 
             this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label26.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(601, 90);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Location = new System.Drawing.Point(451, 73);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(104, 18);
+            this.label26.Size = new System.Drawing.Size(78, 15);
             this.label26.TabIndex = 63;
             this.label26.Text = "Mã thủ thư";
             // 
@@ -2482,29 +2379,26 @@ namespace BTL_QLThuVien
             this.txtPhoneNumberUser_Borrow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtPhoneNumberUser_Borrow.Enabled = false;
-            this.txtPhoneNumberUser_Borrow.Location = new System.Drawing.Point(160, 155);
-            this.txtPhoneNumberUser_Borrow.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPhoneNumberUser_Borrow.Location = new System.Drawing.Point(120, 126);
             this.txtPhoneNumberUser_Borrow.Name = "txtPhoneNumberUser_Borrow";
-            this.txtPhoneNumberUser_Borrow.Size = new System.Drawing.Size(301, 22);
+            this.txtPhoneNumberUser_Borrow.Size = new System.Drawing.Size(227, 20);
             this.txtPhoneNumberUser_Borrow.TabIndex = 62;
             // 
             // label16
             // 
             this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label16.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(31, 158);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(23, 128);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(104, 18);
+            this.label16.Size = new System.Drawing.Size(78, 15);
             this.label16.TabIndex = 61;
             this.label16.Text = "Số điện thoại";
             // 
             // btnCheck
             // 
-            this.btnCheck.Location = new System.Drawing.Point(373, 57);
-            this.btnCheck.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCheck.Location = new System.Drawing.Point(280, 46);
             this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(88, 28);
+            this.btnCheck.Size = new System.Drawing.Size(66, 23);
             this.btnCheck.TabIndex = 60;
             this.btnCheck.Text = "Check";
             this.btnCheck.UseVisualStyleBackColor = true;
@@ -2519,14 +2413,12 @@ namespace BTL_QLThuVien
             this.TenSach1,
             this.TenTheLoai1,
             this.SoLuong1});
-            this.dgvListBooksBorrow.Location = new System.Drawing.Point(8, 263);
-            this.dgvListBooksBorrow.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvListBooksBorrow.Location = new System.Drawing.Point(6, 214);
             this.dgvListBooksBorrow.Name = "dgvListBooksBorrow";
             this.dgvListBooksBorrow.RowHeadersWidth = 51;
-            this.dgvListBooksBorrow.Size = new System.Drawing.Size(740, 156);
+            this.dgvListBooksBorrow.Size = new System.Drawing.Size(555, 127);
             this.dgvListBooksBorrow.TabIndex = 59;
             this.dgvListBooksBorrow.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListBooksBorrow_CellClick);
-            this.dgvListBooksBorrow.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListBooksBorrow_CellContentClick);
             // 
             // MaPhieuMuon
             // 
@@ -2571,21 +2463,19 @@ namespace BTL_QLThuVien
             // txtMaPhieu
             // 
             this.txtMaPhieu.AllowDrop = true;
-            this.txtMaPhieu.Location = new System.Drawing.Point(160, 57);
-            this.txtMaPhieu.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaPhieu.Location = new System.Drawing.Point(120, 46);
             this.txtMaPhieu.Multiline = true;
             this.txtMaPhieu.Name = "txtMaPhieu";
-            this.txtMaPhieu.Size = new System.Drawing.Size(205, 22);
+            this.txtMaPhieu.Size = new System.Drawing.Size(155, 19);
             this.txtMaPhieu.TabIndex = 58;
             // 
             // label14
             // 
             this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label14.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(31, 59);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(23, 48);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(104, 18);
+            this.label14.Size = new System.Drawing.Size(78, 15);
             this.label14.TabIndex = 57;
             this.label14.Text = "Mã Phiếu";
             // 
@@ -2594,20 +2484,18 @@ namespace BTL_QLThuVien
             this.txtAmountBorrowBooks.AllowDrop = true;
             this.txtAmountBorrowBooks.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtAmountBorrowBooks.Location = new System.Drawing.Point(160, 219);
-            this.txtAmountBorrowBooks.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAmountBorrowBooks.Location = new System.Drawing.Point(120, 178);
             this.txtAmountBorrowBooks.Name = "txtAmountBorrowBooks";
-            this.txtAmountBorrowBooks.Size = new System.Drawing.Size(301, 22);
+            this.txtAmountBorrowBooks.Size = new System.Drawing.Size(227, 20);
             this.txtAmountBorrowBooks.TabIndex = 0;
             // 
             // label8
             // 
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label8.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(31, 222);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(23, 180);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(104, 18);
+            this.label8.Size = new System.Drawing.Size(78, 15);
             this.label8.TabIndex = 55;
             this.label8.Text = "Số Lượng";
             // 
@@ -2617,21 +2505,19 @@ namespace BTL_QLThuVien
             this.txtUserName_Borrow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtUserName_Borrow.Enabled = false;
-            this.txtUserName_Borrow.Location = new System.Drawing.Point(160, 123);
-            this.txtUserName_Borrow.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUserName_Borrow.Location = new System.Drawing.Point(120, 100);
             this.txtUserName_Borrow.Name = "txtUserName_Borrow";
-            this.txtUserName_Borrow.Size = new System.Drawing.Size(301, 22);
+            this.txtUserName_Borrow.Size = new System.Drawing.Size(227, 20);
             this.txtUserName_Borrow.TabIndex = 52;
             // 
             // txtSearchBill_BorrowAndReturnBooks
             // 
             this.txtSearchBill_BorrowAndReturnBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearchBill_BorrowAndReturnBooks.ForeColor = System.Drawing.Color.Gray;
-            this.txtSearchBill_BorrowAndReturnBooks.Location = new System.Drawing.Point(775, 368);
-            this.txtSearchBill_BorrowAndReturnBooks.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearchBill_BorrowAndReturnBooks.Location = new System.Drawing.Point(581, 299);
             this.txtSearchBill_BorrowAndReturnBooks.Multiline = true;
             this.txtSearchBill_BorrowAndReturnBooks.Name = "txtSearchBill_BorrowAndReturnBooks";
-            this.txtSearchBill_BorrowAndReturnBooks.Size = new System.Drawing.Size(225, 42);
+            this.txtSearchBill_BorrowAndReturnBooks.Size = new System.Drawing.Size(170, 35);
             this.txtSearchBill_BorrowAndReturnBooks.TabIndex = 6;
             this.txtSearchBill_BorrowAndReturnBooks.Text = "Nhập mã phiếu";
             // 
@@ -2641,21 +2527,18 @@ namespace BTL_QLThuVien
             this.txtUserCode_BorrowAndReturnBooks.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtUserCode_BorrowAndReturnBooks.Enabled = false;
-            this.txtUserCode_BorrowAndReturnBooks.Location = new System.Drawing.Point(160, 91);
-            this.txtUserCode_BorrowAndReturnBooks.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUserCode_BorrowAndReturnBooks.Location = new System.Drawing.Point(120, 74);
             this.txtUserCode_BorrowAndReturnBooks.Name = "txtUserCode_BorrowAndReturnBooks";
-            this.txtUserCode_BorrowAndReturnBooks.Size = new System.Drawing.Size(301, 22);
+            this.txtUserCode_BorrowAndReturnBooks.Size = new System.Drawing.Size(227, 20);
             this.txtUserCode_BorrowAndReturnBooks.TabIndex = 31;
-            this.txtUserCode_BorrowAndReturnBooks.TextChanged += new System.EventHandler(this.txtUserCode_BorrowAndReturnBooks_TextChanged);
             // 
             // label10
             // 
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label10.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(31, 126);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(23, 102);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(104, 18);
+            this.label10.Size = new System.Drawing.Size(78, 15);
             this.label10.TabIndex = 51;
             this.label10.Text = "Tên độc giả";
             // 
@@ -2665,10 +2548,9 @@ namespace BTL_QLThuVien
             this.labelBorrowAndReturn.AutoSize = true;
             this.labelBorrowAndReturn.BackColor = System.Drawing.Color.Yellow;
             this.labelBorrowAndReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.labelBorrowAndReturn.Location = new System.Drawing.Point(431, 18);
-            this.labelBorrowAndReturn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelBorrowAndReturn.Location = new System.Drawing.Point(323, 15);
             this.labelBorrowAndReturn.Name = "labelBorrowAndReturn";
-            this.labelBorrowAndReturn.Size = new System.Drawing.Size(225, 29);
+            this.labelBorrowAndReturn.Size = new System.Drawing.Size(181, 24);
             this.labelBorrowAndReturn.TabIndex = 49;
             this.labelBorrowAndReturn.Text = "MƯỢN TRẢ SÁCH";
             // 
@@ -2676,10 +2558,9 @@ namespace BTL_QLThuVien
             // 
             this.btnSearchBill_BorrowAndReturnBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearchBill_BorrowAndReturnBooks.BackColor = System.Drawing.Color.Aqua;
-            this.btnSearchBill_BorrowAndReturnBooks.Location = new System.Drawing.Point(1011, 368);
-            this.btnSearchBill_BorrowAndReturnBooks.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearchBill_BorrowAndReturnBooks.Location = new System.Drawing.Point(758, 299);
             this.btnSearchBill_BorrowAndReturnBooks.Name = "btnSearchBill_BorrowAndReturnBooks";
-            this.btnSearchBill_BorrowAndReturnBooks.Size = new System.Drawing.Size(84, 46);
+            this.btnSearchBill_BorrowAndReturnBooks.Size = new System.Drawing.Size(63, 37);
             this.btnSearchBill_BorrowAndReturnBooks.TabIndex = 7;
             this.btnSearchBill_BorrowAndReturnBooks.Text = "Tìm kiếm";
             this.btnSearchBill_BorrowAndReturnBooks.UseVisualStyleBackColor = false;
@@ -2689,10 +2570,9 @@ namespace BTL_QLThuVien
             // 
             this.btnReturnBooks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnReturnBooks.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturnBooks.Location = new System.Drawing.Point(933, 282);
-            this.btnReturnBooks.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReturnBooks.Location = new System.Drawing.Point(700, 229);
             this.btnReturnBooks.Name = "btnReturnBooks";
-            this.btnReturnBooks.Size = new System.Drawing.Size(160, 78);
+            this.btnReturnBooks.Size = new System.Drawing.Size(120, 63);
             this.btnReturnBooks.TabIndex = 5;
             this.btnReturnBooks.Text = "Trả Sách";
             this.btnReturnBooks.UseVisualStyleBackColor = false;
@@ -2702,10 +2582,9 @@ namespace BTL_QLThuVien
             // 
             this.btnBorrowBooks.BackColor = System.Drawing.Color.Aqua;
             this.btnBorrowBooks.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrowBooks.Location = new System.Drawing.Point(775, 282);
-            this.btnBorrowBooks.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBorrowBooks.Location = new System.Drawing.Point(581, 229);
             this.btnBorrowBooks.Name = "btnBorrowBooks";
-            this.btnBorrowBooks.Size = new System.Drawing.Size(151, 78);
+            this.btnBorrowBooks.Size = new System.Drawing.Size(113, 63);
             this.btnBorrowBooks.TabIndex = 4;
             this.btnBorrowBooks.Text = "Xác Nhận Mượn";
             this.btnBorrowBooks.UseVisualStyleBackColor = false;
@@ -2715,10 +2594,9 @@ namespace BTL_QLThuVien
             // 
             this.label24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label24.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(31, 94);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Location = new System.Drawing.Point(23, 76);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(104, 18);
+            this.label24.Size = new System.Drawing.Size(78, 15);
             this.label24.TabIndex = 30;
             this.label24.Text = "Mã độc giả";
             // 
@@ -2729,11 +2607,10 @@ namespace BTL_QLThuVien
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvBorrowAndReturnBooks.BackgroundColor = System.Drawing.Color.SeaGreen;
             this.dgvBorrowAndReturnBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBorrowAndReturnBooks.Location = new System.Drawing.Point(8, 427);
-            this.dgvBorrowAndReturnBooks.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvBorrowAndReturnBooks.Location = new System.Drawing.Point(6, 347);
             this.dgvBorrowAndReturnBooks.Name = "dgvBorrowAndReturnBooks";
             this.dgvBorrowAndReturnBooks.RowHeadersWidth = 51;
-            this.dgvBorrowAndReturnBooks.Size = new System.Drawing.Size(1093, 234);
+            this.dgvBorrowAndReturnBooks.Size = new System.Drawing.Size(820, 190);
             this.dgvBorrowAndReturnBooks.TabIndex = 29;
             this.dgvBorrowAndReturnBooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBorrowAndReturnBooks_CellClick);
             // 
@@ -2749,11 +2626,10 @@ namespace BTL_QLThuVien
             this.tPAccount.Controls.Add(this.tabMuonTraSach);
             this.tPAccount.Controls.Add(this.tabNhapSach);
             this.tPAccount.Controls.Add(this.tabThongKe);
-            this.tPAccount.Location = new System.Drawing.Point(11, 6);
-            this.tPAccount.Margin = new System.Windows.Forms.Padding(4);
+            this.tPAccount.Location = new System.Drawing.Point(8, 5);
             this.tPAccount.Name = "tPAccount";
             this.tPAccount.SelectedIndex = 0;
-            this.tPAccount.Size = new System.Drawing.Size(1120, 700);
+            this.tPAccount.Size = new System.Drawing.Size(840, 569);
             this.tPAccount.TabIndex = 0;
             this.tPAccount.SelectedIndexChanged += new System.EventHandler(this.tPAccount_SelectedIndexChanged);
             // 
@@ -2772,11 +2648,10 @@ namespace BTL_QLThuVien
             // 
             // fMainForAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1144, 710);
+            this.ClientSize = new System.Drawing.Size(858, 577);
             this.Controls.Add(this.tPAccount);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fMainForAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fMainForAdmin";
@@ -2788,7 +2663,7 @@ namespace BTL_QLThuVien
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocGia)).EndInit();
             this.tabNhapSach.ResumeLayout(false);
             this.tabNhapSach.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListBook_EnterBooks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnterBooks)).EndInit();
             this.tabNCC.ResumeLayout(false);
             this.tabNCC.PerformLayout();
@@ -2825,7 +2700,7 @@ namespace BTL_QLThuVien
         private System.Windows.Forms.Button btnUpdate_EnterBooks;
         private System.Windows.Forms.Button btnInsert_EnterBooks;
         private System.Windows.Forms.DateTimePicker dateTimePickerDate_EnterBooks;
-        private System.Windows.Forms.TextBox txtAmount_EnterBooks;
+        private System.Windows.Forms.TextBox txtBookName_EnterBooks;
         private System.Windows.Forms.TextBox txtBookcode_EnterBooks;
         private System.Windows.Forms.TextBox txtFormCode_EnterBooks;
         private System.Windows.Forms.Label label11;
@@ -2961,17 +2836,13 @@ namespace BTL_QLThuVien
         private System.Windows.Forms.TextBox txtAmont_Borrow;
         private System.Windows.Forms.Button btnConfirm_Borrow;
         private System.Windows.Forms.Button btnADD;
-        private System.Windows.Forms.TextBox txtSoLuong;
-        private System.Windows.Forms.TextBox txtTheLoai;
+        private System.Windows.Forms.TextBox txtAmount_EnterBooks;
+        private System.Windows.Forms.TextBox txtCategory_EnterBooks;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.TextBox txtTenThuThu1;
         private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenSach2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenTheLoai2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong2;
+        private System.Windows.Forms.DataGridView dgvListBook_EnterBooks;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -3025,5 +2896,11 @@ namespace BTL_QLThuVien
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSach1;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTheLoai1;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong1;
+        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhieu1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenSach2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTheLoai2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong2;
     }
 }

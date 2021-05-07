@@ -131,3 +131,17 @@ C:\Users\Admin\Downloads\BTL (1)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_Q
 C:\Users\Admin\Downloads\BTL (1)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Downloads\BTL (1)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.exe
 C:\Users\Admin\Downloads\BTL (1)\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.pdb
+C:\Users\ducan\Desktop\New folder\Code_BTL_CongCuPM\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.exe.config
+C:\Users\ducan\Desktop\New folder\Code_BTL_CongCuPM\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.exe
+C:\Users\ducan\Desktop\New folder\Code_BTL_CongCuPM\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Debug\BTL_QLThuVien.pdb
+C:\Users\ducan\Desktop\New folder\Code_BTL_CongCuPM\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csprojAssemblyReference.cache
+C:\Users\ducan\Desktop\New folder\Code_BTL_CongCuPM\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fMuonSach_User.resources
+C:\Users\ducan\Desktop\New folder\Code_BTL_CongCuPM\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fResistration.resources
+C:\Users\ducan\Desktop\New folder\Code_BTL_CongCuPM\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fLogin.resources
+C:\Users\ducan\Desktop\New folder\Code_BTL_CongCuPM\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fMainForAdmin.resources
+C:\Users\ducan\Desktop\New folder\Code_BTL_CongCuPM\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.fMainForUser.resources
+C:\Users\ducan\Desktop\New folder\Code_BTL_CongCuPM\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.Properties.Resources.resources
+C:\Users\ducan\Desktop\New folder\Code_BTL_CongCuPM\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csproj.GenerateResource.cache
+C:\Users\ducan\Desktop\New folder\Code_BTL_CongCuPM\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.csproj.CoreCompileInputs.cache
+C:\Users\ducan\Desktop\New folder\Code_BTL_CongCuPM\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.exe
+C:\Users\ducan\Desktop\New folder\Code_BTL_CongCuPM\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Debug\BTL_QLThuVien.pdb
