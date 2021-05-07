@@ -1171,10 +1171,10 @@ namespace BTL_QLThuVien
             if(index >= 0)
             {
                 txtFormCode_EnterBooks.Text = dgvListBook_EnterBooks.Rows[index].Cells[0].Value.ToString();
-                txtBookcode_EnterBooks.Text = dgvListBook_EnterBooks.Rows[index].Cells[0].Value.ToString();
-                txtBookName_EnterBooks.Text = dgvListBook_EnterBooks.Rows[index].Cells[0].Value.ToString();
-                txtCategory_EnterBooks.Text = dgvListBook_EnterBooks.Rows[index].Cells[0].Value.ToString();
-                txtAmount_EnterBooks.Text = dgvListBook_EnterBooks.Rows[index].Cells[0].Value.ToString();
+                txtBookcode_EnterBooks.Text = dgvListBook_EnterBooks.Rows[index].Cells[1].Value.ToString();
+                txtBookName_EnterBooks.Text = dgvListBook_EnterBooks.Rows[index].Cells[2].Value.ToString();
+                txtCategory_EnterBooks.Text = dgvListBook_EnterBooks.Rows[index].Cells[3].Value.ToString();
+                txtAmount_EnterBooks.Text = dgvListBook_EnterBooks.Rows[index].Cells[4].Value.ToString();
             }
         }
 

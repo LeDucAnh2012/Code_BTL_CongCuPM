@@ -290,7 +290,7 @@ namespace BTL_QLThuVien
 
         public bool Delete_Phieu_Nhap(string MaPhieu,string bookCode)
         {
-            string sql = "delete from ListBooks where MaPhieu = '"+MaPhieu+"' and MaSach = '"+bookCode+"'";
+            string sql = "delete from ListBooks where MaPhieu = '"+MaPhieu+"' and MaSach = '"+bookCode+"' delete from NhapSach where MaPhieu = '"+MaPhieu+"'";
             return dal.Execute(sql);
         }
         #endregion

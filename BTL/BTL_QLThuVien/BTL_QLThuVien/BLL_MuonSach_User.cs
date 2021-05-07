@@ -35,7 +35,7 @@ namespace BTL_QLThuVien
         
         public DataTable timKiemBangTenSach(string TenSach)
         {
-            string sql = "select * from Sach where TenSach like '%" + TenSach + "%'";
+            string sql = "select * from Sach where TenSach like N'%" + TenSach + "%'";
             return dal.GetData(sql);
         }
         public bool MuonSach(string MaSach,string TenSach,DateTime NgayNhap,string TinhTrang ,string MaTheLoai)

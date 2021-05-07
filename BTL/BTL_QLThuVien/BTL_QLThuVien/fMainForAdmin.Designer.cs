@@ -29,7 +29,6 @@ namespace BTL_QLThuVien
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.tabThongKe = new System.Windows.Forms.TabPage();
             this.label52 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
@@ -242,8 +241,6 @@ namespace BTL_QLThuVien
             this.label24 = new System.Windows.Forms.Label();
             this.dgvBorrowAndReturnBooks = new System.Windows.Forms.DataGridView();
             this.tPAccount = new System.Windows.Forms.TabControl();
-            this.timerLabel = new System.Windows.Forms.Timer(this.components);
-            this.timerChangeColor = new System.Windows.Forms.Timer(this.components);
             this.tabThongKe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocGia)).BeginInit();
@@ -2633,19 +2630,6 @@ namespace BTL_QLThuVien
             this.tPAccount.TabIndex = 0;
             this.tPAccount.SelectedIndexChanged += new System.EventHandler(this.tPAccount_SelectedIndexChanged);
             // 
-            // timerLabel
-            // 
-            this.timerLabel.Enabled = true;
-            this.timerLabel.Interval = 1;
-            this.timerLabel.Tag = "label9";
-            this.timerLabel.Tick += new System.EventHandler(this.timerLabelAccount_Tick);
-            // 
-            // timerChangeColor
-            // 
-            this.timerChangeColor.Enabled = true;
-            this.timerChangeColor.Interval = 200;
-            this.timerChangeColor.Tick += new System.EventHandler(this.timerChangeColor_Tick);
-            // 
             // fMainForAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2783,8 +2767,6 @@ namespace BTL_QLThuVien
         private System.Windows.Forms.TextBox txtUserName_UserManagement;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.DateTimePicker dateTimePickerRegistrationDate;
-        private System.Windows.Forms.Timer timerLabel;
-        private System.Windows.Forms.Timer timerChangeColor;
         private System.Windows.Forms.Button btnSearchLibrarian;
         private System.Windows.Forms.DateTimePicker dateTimePickerDateBeginWorkLibrarian;
         private System.Windows.Forms.TextBox txtPassWordLibrarion;

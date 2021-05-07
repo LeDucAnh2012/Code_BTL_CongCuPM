@@ -207,7 +207,7 @@ create table PhieuMuon(
 	SoNgayMuon int not null,
 )
 go
-
+select * from TheLoai
 create table ListBooksPhieuMuon(
 	
 	MaPhieuMuon varchar(10) not null,
