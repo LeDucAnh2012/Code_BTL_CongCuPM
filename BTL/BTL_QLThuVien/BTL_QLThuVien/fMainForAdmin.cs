@@ -1053,7 +1053,7 @@ namespace BTL_QLThuVien
                     dgvAddBooks.DataSource = bul.GetDataListBooks();
                 }
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
 
             }
@@ -1068,7 +1068,7 @@ namespace BTL_QLThuVien
                     dgvAddBooks.DataSource = bul.GetDataListBooks();
                 }
             }
-            catch(Exception e)
+            catch(Exception ex)
             {
 
             }
