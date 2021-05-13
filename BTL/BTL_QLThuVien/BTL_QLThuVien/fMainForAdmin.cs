@@ -735,13 +735,25 @@ namespace BTL_QLThuVien
         private void dgvBorrowAndReturnBooks_CellClick(object sender, DataGridViewCellEventArgs e)
         {
              index = e.RowIndex;
+            if(index >=0)
+            {
+                txtMaPhieu.Text = dgvBorrowAndReturnBooks.Rows[index].Cells[0].Value.ToString();
+                txtUserCode_BorrowAndReturnBooks.Text = dgvBorrowAndReturnBooks.Rows[index].Cells[1].Value.ToString();
+                txtUserName_Borrow.Text = dgvBorrowAndReturnBooks.Rows[index].Cells[2].Value.ToString();
+                txtPhoneNumberUser_Borrow.Text = dgvBorrowAndReturnBooks.Rows[index].Cells[3].Value.ToString();
+                txtLibrarianName.Text = dgvBorrowAndReturnBooks.Rows[index].Cells[4].Value.ToString();
+                txtLibrarianName_Borrow.Text = dgvBorrowAndReturnBooks.Rows[index].Cells[5].Value.ToString();
+                txtPhoneNumberLibrarian_Borrow.Text = dgvBorrowAndReturnBooks.Rows[index].Cells[6].Value.ToString();
+                dgvListBooksBorrow.DataSource = bul.GetDataTableListBook(dgvBorrowAndReturnBooks.Rows[index].Cells[0].Value.ToString());
+
+            }
             
         }
         private void btnConfirm_Borrow_Click(object sender, EventArgs e)
         {
             try
             {
-                if (bul.UpdateListBooksPhieuMuon(txtBookCode_Borrow.Text, int.Parse(txtAmountBorrowBooks.Text)) &&
+                if (bul.UpdateListBooksPhieuMuon(txtBookCode_Borrow.Text, int.Parse(txtAmountBorrowBooks.Text),txtMaPhieu.Text) &&
                     bul.UpdatePhieuMuon(txtMaPhieu.Text,int.Parse(txtAmont_Borrow.Text)))
                 {
                     MessageBox.Show("Sửa thành công");

@@ -43,11 +43,15 @@ namespace BTL_QLThuVien
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            bll.XoaPhieuMuonTam();
-            fMainForUser f = new fMainForUser();
-            f.FormClosed += new FormClosedEventHandler(fMainForUser);
-            f.Show();
-            this.Hide();
+            if(DialogResult.Yes == MessageBox.Show("Bạn có muốn hủy","Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            {
+                bll.XoaPhieuMuonTam();
+                fMainForUser f = new fMainForUser();
+                f.FormClosed += new FormClosedEventHandler(fMainForUser);
+                f.Show();
+                this.Hide();
+            }
+            
         }
         private void fMainForUser(object sender, EventArgs e)
         {

@@ -72,9 +72,8 @@ namespace BTL_QLThuVien
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            bll.SUA(txtTenDangNhap.Text, txtMaDocGia.Text, txtTenDocGia.Text, Convert.ToDateTime(dtpNgaySinh.Value),
-               txtDiaChi.Text, (txtSDT.Text), (txtCMND.Text), dtpNgayDangKy.Value);
-            bll.SUAPASS(txtTenDangNhap.Text, txtMatKhau.Text);
+            if(bll.SUA(txtTenDangNhap.Text, txtMaDocGia.Text, txtTenDocGia.Text, Convert.ToDateTime(dtpNgaySinh.Value),
+               txtDiaChi.Text, (txtSDT.Text), (txtCMND.Text), dtpNgayDangKy.Value) && bll.SUAPASS(txtTenDangNhap.Text, txtMatKhau.Text))
             MessageBox.Show("Sửa thành công!");
         }
 
@@ -123,7 +122,7 @@ namespace BTL_QLThuVien
 
             if (listSachMuon.SelectedItems.Count > 0)
             {
-                DialogResult dl = MessageBox.Show("Bạn muốn xóa?", "canh bao", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                DialogResult dl = MessageBox.Show("Bạn muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 if (dl == DialogResult.OK)
                     listSachMuon.Items.Remove(listSachMuon.SelectedItems[0]);
             }
@@ -134,7 +133,7 @@ namespace BTL_QLThuVien
         private void btnBotNhieu_Click(object sender, EventArgs e)
         {
 
-            DialogResult dl = MessageBox.Show("Bạn muốn xóa tất cả?", "canh bao", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            DialogResult dl = MessageBox.Show("Bạn muốn xóa tất cả?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (dl == DialogResult.OK)
                 listSachMuon.Items.Clear();
 
@@ -142,12 +141,16 @@ namespace BTL_QLThuVien
 
         private void btnThoatfMainUser_Click(object sender, EventArgs e)
         {
-            BULs bul = new BULs();
-            bul.DeleteInforLoginTo_TMP_TABLE();
-            fLogin f = new fLogin();
-            f.FormClosed += new FormClosedEventHandler(fLogin1);
-            f.Show();
-            Application.Exit();
+            if(DialogResult.Yes == MessageBox.Show("Bạn có muốn thoát?","Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            {
+                BULs bul = new BULs();
+                bul.DeleteInforLoginTo_TMP_TABLE();
+                fLogin f = new fLogin();
+                f.FormClosed += new FormClosedEventHandler(fLogin1);
+                f.Show();
+                Application.Exit();
+            }
+            
         }
         private void fLogin1 (object sender, EventArgs e)
         {

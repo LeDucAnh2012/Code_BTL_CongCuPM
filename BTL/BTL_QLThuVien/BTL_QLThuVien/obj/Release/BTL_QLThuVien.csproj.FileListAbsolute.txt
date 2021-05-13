@@ -1,0 +1,14 @@
+F:\HocKy2Nam3\CongCuPhatTrienPM\Bao_Cao_BTL_CongCuPTPM\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Release\BTL_QLThuVien.exe.config
+F:\HocKy2Nam3\CongCuPhatTrienPM\Bao_Cao_BTL_CongCuPTPM\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Release\BTL_QLThuVien.exe
+F:\HocKy2Nam3\CongCuPhatTrienPM\Bao_Cao_BTL_CongCuPTPM\BTL\BTL_QLThuVien\BTL_QLThuVien\bin\Release\BTL_QLThuVien.pdb
+F:\HocKy2Nam3\CongCuPhatTrienPM\Bao_Cao_BTL_CongCuPTPM\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Release\BTL_QLThuVien.csprojAssemblyReference.cache
+F:\HocKy2Nam3\CongCuPhatTrienPM\Bao_Cao_BTL_CongCuPTPM\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Release\BTL_QLThuVien.fMuonSach_User.resources
+F:\HocKy2Nam3\CongCuPhatTrienPM\Bao_Cao_BTL_CongCuPTPM\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Release\BTL_QLThuVien.fResistration.resources
+F:\HocKy2Nam3\CongCuPhatTrienPM\Bao_Cao_BTL_CongCuPTPM\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Release\BTL_QLThuVien.fLogin.resources
+F:\HocKy2Nam3\CongCuPhatTrienPM\Bao_Cao_BTL_CongCuPTPM\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Release\BTL_QLThuVien.fMainForAdmin.resources
+F:\HocKy2Nam3\CongCuPhatTrienPM\Bao_Cao_BTL_CongCuPTPM\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Release\BTL_QLThuVien.fMainForUser.resources
+F:\HocKy2Nam3\CongCuPhatTrienPM\Bao_Cao_BTL_CongCuPTPM\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Release\BTL_QLThuVien.Properties.Resources.resources
+F:\HocKy2Nam3\CongCuPhatTrienPM\Bao_Cao_BTL_CongCuPTPM\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Release\BTL_QLThuVien.csproj.GenerateResource.cache
+F:\HocKy2Nam3\CongCuPhatTrienPM\Bao_Cao_BTL_CongCuPTPM\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Release\BTL_QLThuVien.csproj.CoreCompileInputs.cache
+F:\HocKy2Nam3\CongCuPhatTrienPM\Bao_Cao_BTL_CongCuPTPM\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Release\BTL_QLThuVien.exe
+F:\HocKy2Nam3\CongCuPhatTrienPM\Bao_Cao_BTL_CongCuPTPM\BTL\BTL_QLThuVien\BTL_QLThuVien\obj\Release\BTL_QLThuVien.pdb

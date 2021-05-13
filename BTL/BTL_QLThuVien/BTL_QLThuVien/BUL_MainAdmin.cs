@@ -181,6 +181,12 @@ namespace BTL_QLThuVien
             string sql = "select * from ListBooksPhieuMuon";
                 return dal.GetData(sql);
         }
+
+        public DataTable GetDataTableListBook(string MaPhieu)
+        {
+            string sql = "select * from ListBooksPhieuMuon where MaPhieuMuon = '"+MaPhieu+"'";
+            return dal.GetData(sql);
+        }
         //Funct GetNameBooks
         public DataTable GetNameBook_BorrowAndReturn(string NameBooks)
         {
@@ -213,9 +219,9 @@ namespace BTL_QLThuVien
             return dal.GetData(sqlSELECT);
         }
         //Update table ListBooksPhieuMuon
-        public bool UpdateListBooksPhieuMuon(string MaSach,int soluong)
+        public bool UpdateListBooksPhieuMuon(string MaSach,int soluong,string MaPhieu)
         {
-            string sql = "update ListBooksPhieuMuon set SoLuong = '"+soluong+"' where MaSach = '"+MaSach+"'";
+            string sql = "update ListBooksPhieuMuon set SoLuong = '"+soluong+"' where MaSach = '"+MaSach+"' and MaPhieuMuon = '"+MaPhieu+"'";
             return dal.Execute(sql);
         }
         //update table PhieuMuon
@@ -264,7 +270,7 @@ namespace BTL_QLThuVien
             string sql = "select * from tmp_SachNhap";
             return dal.GetData(sql);
         }
-
+       
         public DataTable GetDataListBooks(string MaPhieu)
         {
             string sql = "select * from ListBooks Where MaPhieu = '"+MaPhieu+"'";
